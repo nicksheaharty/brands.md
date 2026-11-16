@@ -5,3 +5,4 @@ public/designs
 next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+.env*
