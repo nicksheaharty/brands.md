@@ -16,7 +16,7 @@ name: Letterboxd                 # display name
 shortName: Letterboxd            # optional, label under the home-screen icon (keep it to ~12 characters)
 slug: letterboxd                 # same as the folder name
 url: https://letterboxd.com
-category: Social                 # one of: Social, Entertainment, Studio, Accelerator, Education, Productivity, Developer, Commerce, Travel, Music
+category: Social                 # one of: Social, Entertainment, Studio, Streaming, Accelerator, Education, Productivity, Developer, Commerce, Travel, Music
 tagline: "Dark, cinematic, poster-first social diary for film lovers."   # <= 90 chars
 updated: 2026-11-16
 logoBackground: "#14181C"        # a background the logo looks right on

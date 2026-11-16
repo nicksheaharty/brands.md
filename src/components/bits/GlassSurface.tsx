@@ -68,6 +68,8 @@ export interface GlassSurfaceProps {
   yChannel?: GlassSurfaceChannel;
   mixBlendMode?: CSSProperties['mixBlendMode'];
   refraction?: boolean;
+  /** Site tweak: replace every edge treatment (glow shadows, frosted rim) with a single 1px line. */
+  hairline?: boolean;
   renderer?: GlassSurfaceRenderer;
   backdrop?: RefObject<GlassSurfaceBackdrop | null> | GlassSurfaceBackdrop | null;
   shape?: string;
@@ -402,6 +404,8 @@ const RIM =
 
 const RING = 'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)';
 
+const HAIRLINE = 'inset 0 0 0 1px hsl(0 0% 100% / 0.1)';
+
 const GlassSurface = ({
   children,
   width = 200,
@@ -422,6 +426,7 @@ const GlassSurface = ({
   yChannel = 'G',
   mixBlendMode = 'difference',
   refraction = true,
+  hairline = false,
   renderer = 'auto',
   backdrop,
   shape,
@@ -868,18 +873,18 @@ const GlassSurface = ({
   const fallbackFilter = `blur(12px) saturate(${saturation * 1.4}) brightness(1.04)`;
 
   const modeStyle: CSSProperties = webgl
-    ? { boxShadow: WEBGL_SHADOW }
+    ? { boxShadow: hairline ? HAIRLINE : WEBGL_SHADOW }
     : refractive
       ? {
           background: `light-dark(hsl(0 0% 100% / ${backgroundOpacity}), hsl(0 0% 0% / ${backgroundOpacity}))`,
           backdropFilter: `url(#${filterId}) saturate(${saturation})`,
-          boxShadow: SVG_SHADOW
+          boxShadow: hairline ? HAIRLINE : SVG_SHADOW
         }
       : {
           background: frost,
           WebkitBackdropFilter: fallbackFilter,
           backdropFilter: fallbackFilter,
-          boxShadow: FALLBACK_SHADOW
+          boxShadow: hairline ? HAIRLINE : FALLBACK_SHADOW
         };
 
   const containerStyle = {
@@ -964,7 +969,7 @@ const GlassSurface = ({
           className="pointer-events-none absolute inset-0 rounded-[inherit]"
           style={{
             background: `light-dark(hsl(0 0% 100% / ${backgroundOpacity}), hsl(0 0% 0% / ${backgroundOpacity}))`,
-            boxShadow: outline ? 'none' : FRAME_SHADOW
+            boxShadow: outline ? 'none' : hairline ? HAIRLINE : FRAME_SHADOW
           }}
         />
       )}
@@ -975,7 +980,7 @@ const GlassSurface = ({
           style={{ background: SHEEN }}
         />
       )}
-      {frosted && !outline && (
+      {frosted && !outline && !hairline && (
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 rounded-[inherit] p-[3px]"
