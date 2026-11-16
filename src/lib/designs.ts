@@ -58,7 +58,15 @@ function load(slug: string): Design | null {
   const file = path.join(DIR, slug, "DESIGN.md");
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");
-  const { data, content } = matter(raw);
+  let parsed;
+  try {
+    parsed = matter(raw);
+  } catch (e) {
+    // A folder with unparseable frontmatter (e.g. still being written) is skipped rather than breaking the build.
+    console.warn(`skipping designs/${slug}: ${(e as Error).message.split("\n")[0]}`);
+    return null;
+  }
+  const { data, content } = parsed;
   const logoPath = path.join(DIR, slug, "logo.svg");
   const updated = data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : String(data.updated ?? "");
   return {

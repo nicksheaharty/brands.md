@@ -26,7 +26,13 @@ for (const slug of fs.readdirSync(src).sort()) {
   if (fs.existsSync(path.join(dir, "icon.png"))) {
     await sharp(path.join(dir, "icon.png")).resize(192, 192).webp({ quality: 86 }).toFile(path.join(out, slug, "icon.webp"));
   }
-  const { data } = matter(fs.readFileSync(md, "utf8"));
+  let data;
+  try {
+    data = matter(fs.readFileSync(md, "utf8")).data;
+  } catch {
+    console.warn(`skipping ${slug}: bad frontmatter`);
+    continue;
+  }
   index.push({
     name: data.name,
     slug,
