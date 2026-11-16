@@ -74,7 +74,7 @@ const siteHtml = () => {
     <div style="height:46px;width:184px">${dots.replace("<svg", '<svg style="height:46px;width:auto"')}</div>
     <div class="title" style="font-size:104px;line-height:1;margin-top:34px;white-space:nowrap">brands.md</div>
     <div style="font-size:34px;font-style:italic;color:#FF9670;margin-top:22px">great artists steal to learn.</div>
-    <div style="font:20px ui-monospace,Menlo,monospace;color:rgba(255,239,234,.5);margin-top:40px">100+ brands · brands-md.vercel.app</div>
+    <div style="font:20px ui-monospace,Menlo,monospace;color:rgba(255,239,234,.5);margin-top:40px">100+ brands · brands.nickharty.com</div>
   </div>
   <div style="position:absolute;left:730px;top:-170px;width:720px;transform:rotate(-14deg);display:grid;grid-template-columns:repeat(5,112px);gap:26px">
     ${wall.map((d) => `<div class="icon" style="width:112px;height:112px">${d.icon}</div>`).join("")}
@@ -96,7 +96,7 @@ const designHtml = (d) => `<!doctype html><html><head>${frame}</head><body>${chr
       <div style="display:flex;gap:10px;margin-top:28px">${d.colors.map((c) => `<span style="width:30px;height:30px;border-radius:50%;background:${c};outline:1px solid rgba(255,255,255,.2)"></span>`).join("")}</div>
     </div>
   </div>
-  <div class="meta">brands-md.vercel.app/${d.slug}</div>
+  <div class="meta">brands.nickharty.com/${d.slug}</div>
   </body></html>`;
 
 const browser = await chromium.launch({ channel: "chrome" });

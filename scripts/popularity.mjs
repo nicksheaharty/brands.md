@@ -7,7 +7,7 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const UA = { "User-Agent": "brands-md.vercel.app popularity script (github.com/nicksheaharty/brands.md)" };
+const UA = { "User-Agent": "brands.nickharty.com popularity script (github.com/nicksheaharty/brands.md)" };
 
 // Brand names that collide with ordinary words or other topics.
 const TITLES = {

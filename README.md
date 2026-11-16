@@ -7,7 +7,7 @@
 <p align="center"><em>great artists steal to learn.</em><br/>Open-sourced DESIGN.md files for 100+ brands.</p>
 
 <p align="center">
-  <a href="https://brands-md.vercel.app">brands-md.vercel.app</a>
+  <a href="https://brands.nickharty.com">brands.nickharty.com</a>
 </p>
 
 ![The design.md library home page](public/og.png)
@@ -24,46 +24,46 @@ Build the settings page following DESIGN.md.
 
 | | Brand | Category | In one line | |
 |---|---|---|---|---|
-| <img src="designs/500-global/icon.svg" height="24" alt=""> | [500 Global](designs/500-global/DESIGN.md) | Accelerator | Cream paper, deep teal ink, light serif headlines and a lime highlighter accent. | [preview](https://brands-md.vercel.app/500-global) |
-| <img src="designs/a24/icon.png" height="24" alt=""> | [A24](designs/a24/DESIGN.md) | Studio | Warm black, square corners, one grotesque and the poster doing all the talking. | [preview](https://brands-md.vercel.app/a24) |
-| <img src="designs/airbnb/icon.png" height="24" alt=""> | [Airbnb](designs/airbnb/DESIGN.md) | Travel | Warm, photo-led white canvas with one coral-pink accent and soft rounded cards. | [preview](https://brands-md.vercel.app/airbnb) |
-| <img src="designs/amazon-mgm-studios/icon.svg" height="24" alt=""> | [Amazon MGM Studios](designs/amazon-mgm-studios/DESIGN.md) | Studio | Gold, widely spaced capitals on black, with MGM's lion heritage behind them. | [preview](https://brands-md.vercel.app/amazon-mgm-studios) |
-| <img src="designs/antler/icon.svg" height="24" alt=""> | [Antler](designs/antler/DESIGN.md) | Accelerator | Warm off-white pages, black square-cornered buttons that flash red, a pale mint accent. | [preview](https://brands-md.vercel.app/antler) |
-| <img src="designs/apple-tv/icon.png" height="24" alt=""> | [Apple TV](designs/apple-tv/DESIGN.md) | Streaming | Black glass, white type, and full-bleed key art: Apple's restraint applied to TV. | [preview](https://brands-md.vercel.app/apple-tv) |
-| <img src="designs/criterion-channel/icon.png" height="24" alt=""> | [The Criterion Channel](designs/criterion-channel/DESIGN.md) | Streaming | Charcoal screen, old-gold accents, serif titles: a repertory cinema on demand. | [preview](https://brands-md.vercel.app/criterion-channel) |
-| <img src="designs/crunchyroll/icon.png" height="24" alt=""> | [Crunchyroll](designs/crunchyroll/DESIGN.md) | Streaming | Anime on black: a bold orange eye, square buttons, and poster walls built for fans. | [preview](https://brands-md.vercel.app/crunchyroll) |
-| <img src="designs/disney-plus/icon.png" height="24" alt=""> | [Disney+](designs/disney-plus/DESIGN.md) | Streaming | Deep navy, teal glow, white script logo and franchise tiles: a family streaming UI. | [preview](https://brands-md.vercel.app/disney-plus) |
-| <img src="designs/entrepreneur-first/icon.svg" height="24" alt=""> | [Entrepreneurs First](designs/entrepreneur-first/DESIGN.md) | Accelerator | Huge uppercase serif headlines, violet and orange blocks, square corners and arrow links. | [preview](https://brands-md.vercel.app/entrepreneur-first) |
-| <img src="designs/facebook/icon.png" height="24" alt=""> | [Facebook](designs/facebook/DESIGN.md) | Social | Friendly, dense, blue-and-grey feed UI built for billions of daily scrolls. | [preview](https://brands-md.vercel.app/facebook) |
-| <img src="designs/hbo-max/icon.png" height="24" alt=""> | [HBO Max](designs/hbo-max/DESIGN.md) | Streaming | Black, silver and steel blue: a quiet premium streaming UI that lets the HBO name lead. | [preview](https://brands-md.vercel.app/hbo-max) |
-| <img src="designs/hulu/icon.png" height="24" alt=""> | [Hulu](designs/hulu/DESIGN.md) | Streaming | Charcoal canvas, one electric green, uppercase CTAs: a TV-first streaming UI. | [preview](https://brands-md.vercel.app/hulu) |
-| <img src="designs/instagram/icon.png" height="24" alt=""> | [Instagram](designs/instagram/DESIGN.md) | Social | Photo-first, chrome-light grid with a warm gradient glyph and one action blue. | [preview](https://brands-md.vercel.app/instagram) |
-| <img src="designs/legendary/icon.svg" height="24" alt=""> | [Legendary Entertainment](designs/legendary/DESIGN.md) | Studio | Midnight navy, uppercase Gotham and kaiju-scale video heroes from the Dune studio. | [preview](https://brands-md.vercel.app/legendary) |
-| <img src="designs/letterboxd/icon.png" height="24" alt=""> | [Letterboxd](designs/letterboxd/DESIGN.md) | Social | Dark, cinematic, poster-first social diary for film lovers. | [preview](https://brands-md.vercel.app/letterboxd) |
-| <img src="designs/linear/icon.png" height="24" alt=""> | [Linear](designs/linear/DESIGN.md) | Productivity | Near-black, precise and fast: Inter at odd weights, hairline borders, indigo accents. | [preview](https://brands-md.vercel.app/linear) |
-| <img src="designs/lionsgate/icon.svg" height="24" alt=""> | [Lionsgate](designs/lionsgate/DESIGN.md) | Studio | Black screen, heavy white wordmark, steel-blue glow: a franchise studio built on key art. | [preview](https://brands-md.vercel.app/lionsgate) |
-| <img src="designs/mubi/icon.png" height="24" alt=""> | [MUBI](designs/mubi/DESIGN.md) | Streaming | White page, MUBI blue, uppercase Riforma: a curated cinema that reads like a magazine. | [preview](https://brands-md.vercel.app/mubi) |
-| <img src="designs/neon/icon.svg" height="24" alt=""> | [NEON](designs/neon/DESIGN.md) | Studio | White page, black type shouting in condensed caps, and a tube-lit wordmark. | [preview](https://brands-md.vercel.app/neon) |
-| <img src="designs/netflix/icon.png" height="24" alt=""> | [Netflix](designs/netflix/DESIGN.md) | Entertainment | Black canvas, red signal, wall-to-wall artwork: a streaming UI built for the couch. | [preview](https://brands-md.vercel.app/netflix) |
-| <img src="designs/notion/icon.png" height="24" alt=""> | [Notion](designs/notion/DESIGN.md) | Productivity | Quiet, paper-like workspace: warm greys, black ink, one blue, hand-drawn people. | [preview](https://brands-md.vercel.app/notion) |
-| <img src="designs/paramount/icon.svg" height="24" alt=""> | [Paramount](designs/paramount/DESIGN.md) | Studio | A snow-capped peak under an arc of stars, in deep navy and Paramount blue. | [preview](https://brands-md.vercel.app/paramount) |
-| <img src="designs/paramount-plus/icon.png" height="24" alt=""> | [Paramount+](designs/paramount-plus/DESIGN.md) | Streaming | Electric blue on black, a starred mountain, and capital-letter headlines over big key art. | [preview](https://brands-md.vercel.app/paramount-plus) |
-| <img src="designs/peacock/icon.png" height="24" alt=""> | [Peacock](designs/peacock/DESIGN.md) | Streaming | Black screen, white lowercase wordmark, a stack of colour dots and a gold pill button. | [preview](https://brands-md.vercel.app/peacock) |
-| <img src="designs/pear-vc/icon.svg" height="24" alt=""> | [Pear VC](designs/pear-vc/DESIGN.md) | Accelerator | Cream pages, soft green-to-lime gradients, rounded pill buttons and a faceted green pear. | [preview](https://brands-md.vercel.app/pear-vc) |
-| <img src="designs/pixar/icon.svg" height="24" alt=""> | [Pixar Animation Studios](designs/pixar/DESIGN.md) | Studio | A quiet white gallery of film art, light Proxima Nova and the serif wordmark. | [preview](https://brands-md.vercel.app/pixar) |
-| <img src="designs/pluto-tv/icon.png" height="24" alt=""> | [Pluto TV](designs/pluto-tv/DESIGN.md) | Streaming | Black canvas, highlighter yellow, and a channel guide that scrolls like cable. | [preview](https://brands-md.vercel.app/pluto-tv) |
-| <img src="designs/prime-video/icon.png" height="24" alt=""> | [Prime Video](designs/prime-video/DESIGN.md) | Streaming | Midnight blue-black, glowing blue pills, big hero cards: Amazon's 2024 streaming redesign. | [preview](https://brands-md.vercel.app/prime-video) |
-| <img src="designs/sony-pictures/icon.svg" height="24" alt=""> | [Sony Pictures](designs/sony-pictures/DESIGN.md) | Studio | Ink-navy and white, condensed uppercase headlines, one cyan accent and the Columbia torch. | [preview](https://brands-md.vercel.app/sony-pictures) |
-| <img src="designs/spotify/icon.png" height="24" alt=""> | [Spotify](designs/spotify/DESIGN.md) | Music | Dark, cover-art-led player UI with a single bright green and pill controls. | [preview](https://brands-md.vercel.app/spotify) |
-| <img src="designs/storiara/icon.svg" height="24" alt=""> | [Storiara](designs/storiara/DESIGN.md) | Entertainment | Near-black, indigo-lit pre-production software for film and TV crews. | [preview](https://brands-md.vercel.app/storiara) |
-| <img src="designs/stripe/icon.png" height="24" alt=""> | [Stripe](designs/stripe/DESIGN.md) | Developer | Precise, light-weight type on white, blurple accents and a flowing gradient hero. | [preview](https://brands-md.vercel.app/stripe) |
-| <img src="designs/techstars/icon.svg" height="24" alt=""> | [Techstars](designs/techstars/DESIGN.md) | Accelerator | Bold Suisse type, black and white with a bright green underscore and pill buttons. | [preview](https://brands-md.vercel.app/techstars) |
-| <img src="designs/tubi/icon.png" height="24" alt=""> | [Tubi](designs/tubi/DESIGN.md) | Streaming | Deep purple-black, electric yellow, chunky lowercase type: free streaming with attitude. | [preview](https://brands-md.vercel.app/tubi) |
-| <img src="designs/universal/icon.svg" height="24" alt=""> | [Universal Pictures](designs/universal/DESIGN.md) | Studio | The globe and arched wordmark in white on near-black, with one bright blue for action. | [preview](https://brands-md.vercel.app/universal) |
-| <img src="designs/upenn/icon.svg" height="24" alt=""> | [University of Pennsylvania](designs/upenn/DESIGN.md) | Education | Penn Blue and Penn Red on white, Garamond headlines, and a shield dating to 1740. | [preview](https://brands-md.vercel.app/upenn) |
-| <img src="designs/warner-bros/icon.svg" height="24" alt=""> | [Warner Bros.](designs/warner-bros/DESIGN.md) | Studio | Gold-rimmed blue shield on near-black: a classic studio crest rebuilt for screens. | [preview](https://brands-md.vercel.app/warner-bros) |
-| <img src="designs/x/icon.png" height="24" alt=""> | [X](designs/x/DESIGN.md) | Social | Black, text-first timeline with Chirp type, hairline dividers and a single sky blue. | [preview](https://brands-md.vercel.app/x) |
-| <img src="designs/y-combinator/icon.png" height="24" alt=""> | [Y Combinator](designs/y-combinator/DESIGN.md) | Accelerator | Warm beige paper, serif headlines with italic accents, and the orange Y square. | [preview](https://brands-md.vercel.app/y-combinator) |
+| <img src="designs/500-global/icon.svg" height="24" alt=""> | [500 Global](designs/500-global/DESIGN.md) | Accelerator | Cream paper, deep teal ink, light serif headlines and a lime highlighter accent. | [preview](https://brands.nickharty.com/500-global) |
+| <img src="designs/a24/icon.png" height="24" alt=""> | [A24](designs/a24/DESIGN.md) | Studio | Warm black, square corners, one grotesque and the poster doing all the talking. | [preview](https://brands.nickharty.com/a24) |
+| <img src="designs/airbnb/icon.png" height="24" alt=""> | [Airbnb](designs/airbnb/DESIGN.md) | Travel | Warm, photo-led white canvas with one coral-pink accent and soft rounded cards. | [preview](https://brands.nickharty.com/airbnb) |
+| <img src="designs/amazon-mgm-studios/icon.svg" height="24" alt=""> | [Amazon MGM Studios](designs/amazon-mgm-studios/DESIGN.md) | Studio | Gold, widely spaced capitals on black, with MGM's lion heritage behind them. | [preview](https://brands.nickharty.com/amazon-mgm-studios) |
+| <img src="designs/antler/icon.svg" height="24" alt=""> | [Antler](designs/antler/DESIGN.md) | Accelerator | Warm off-white pages, black square-cornered buttons that flash red, a pale mint accent. | [preview](https://brands.nickharty.com/antler) |
+| <img src="designs/apple-tv/icon.png" height="24" alt=""> | [Apple TV](designs/apple-tv/DESIGN.md) | Streaming | Black glass, white type, and full-bleed key art: Apple's restraint applied to TV. | [preview](https://brands.nickharty.com/apple-tv) |
+| <img src="designs/criterion-channel/icon.png" height="24" alt=""> | [The Criterion Channel](designs/criterion-channel/DESIGN.md) | Streaming | Charcoal screen, old-gold accents, serif titles: a repertory cinema on demand. | [preview](https://brands.nickharty.com/criterion-channel) |
+| <img src="designs/crunchyroll/icon.png" height="24" alt=""> | [Crunchyroll](designs/crunchyroll/DESIGN.md) | Streaming | Anime on black: a bold orange eye, square buttons, and poster walls built for fans. | [preview](https://brands.nickharty.com/crunchyroll) |
+| <img src="designs/disney-plus/icon.png" height="24" alt=""> | [Disney+](designs/disney-plus/DESIGN.md) | Streaming | Deep navy, teal glow, white script logo and franchise tiles: a family streaming UI. | [preview](https://brands.nickharty.com/disney-plus) |
+| <img src="designs/entrepreneur-first/icon.svg" height="24" alt=""> | [Entrepreneurs First](designs/entrepreneur-first/DESIGN.md) | Accelerator | Huge uppercase serif headlines, violet and orange blocks, square corners and arrow links. | [preview](https://brands.nickharty.com/entrepreneur-first) |
+| <img src="designs/facebook/icon.png" height="24" alt=""> | [Facebook](designs/facebook/DESIGN.md) | Social | Friendly, dense, blue-and-grey feed UI built for billions of daily scrolls. | [preview](https://brands.nickharty.com/facebook) |
+| <img src="designs/hbo-max/icon.png" height="24" alt=""> | [HBO Max](designs/hbo-max/DESIGN.md) | Streaming | Black, silver and steel blue: a quiet premium streaming UI that lets the HBO name lead. | [preview](https://brands.nickharty.com/hbo-max) |
+| <img src="designs/hulu/icon.png" height="24" alt=""> | [Hulu](designs/hulu/DESIGN.md) | Streaming | Charcoal canvas, one electric green, uppercase CTAs: a TV-first streaming UI. | [preview](https://brands.nickharty.com/hulu) |
+| <img src="designs/instagram/icon.png" height="24" alt=""> | [Instagram](designs/instagram/DESIGN.md) | Social | Photo-first, chrome-light grid with a warm gradient glyph and one action blue. | [preview](https://brands.nickharty.com/instagram) |
+| <img src="designs/legendary/icon.svg" height="24" alt=""> | [Legendary Entertainment](designs/legendary/DESIGN.md) | Studio | Midnight navy, uppercase Gotham and kaiju-scale video heroes from the Dune studio. | [preview](https://brands.nickharty.com/legendary) |
+| <img src="designs/letterboxd/icon.png" height="24" alt=""> | [Letterboxd](designs/letterboxd/DESIGN.md) | Social | Dark, cinematic, poster-first social diary for film lovers. | [preview](https://brands.nickharty.com/letterboxd) |
+| <img src="designs/linear/icon.png" height="24" alt=""> | [Linear](designs/linear/DESIGN.md) | Productivity | Near-black, precise and fast: Inter at odd weights, hairline borders, indigo accents. | [preview](https://brands.nickharty.com/linear) |
+| <img src="designs/lionsgate/icon.svg" height="24" alt=""> | [Lionsgate](designs/lionsgate/DESIGN.md) | Studio | Black screen, heavy white wordmark, steel-blue glow: a franchise studio built on key art. | [preview](https://brands.nickharty.com/lionsgate) |
+| <img src="designs/mubi/icon.png" height="24" alt=""> | [MUBI](designs/mubi/DESIGN.md) | Streaming | White page, MUBI blue, uppercase Riforma: a curated cinema that reads like a magazine. | [preview](https://brands.nickharty.com/mubi) |
+| <img src="designs/neon/icon.svg" height="24" alt=""> | [NEON](designs/neon/DESIGN.md) | Studio | White page, black type shouting in condensed caps, and a tube-lit wordmark. | [preview](https://brands.nickharty.com/neon) |
+| <img src="designs/netflix/icon.png" height="24" alt=""> | [Netflix](designs/netflix/DESIGN.md) | Entertainment | Black canvas, red signal, wall-to-wall artwork: a streaming UI built for the couch. | [preview](https://brands.nickharty.com/netflix) |
+| <img src="designs/notion/icon.png" height="24" alt=""> | [Notion](designs/notion/DESIGN.md) | Productivity | Quiet, paper-like workspace: warm greys, black ink, one blue, hand-drawn people. | [preview](https://brands.nickharty.com/notion) |
+| <img src="designs/paramount/icon.svg" height="24" alt=""> | [Paramount](designs/paramount/DESIGN.md) | Studio | A snow-capped peak under an arc of stars, in deep navy and Paramount blue. | [preview](https://brands.nickharty.com/paramount) |
+| <img src="designs/paramount-plus/icon.png" height="24" alt=""> | [Paramount+](designs/paramount-plus/DESIGN.md) | Streaming | Electric blue on black, a starred mountain, and capital-letter headlines over big key art. | [preview](https://brands.nickharty.com/paramount-plus) |
+| <img src="designs/peacock/icon.png" height="24" alt=""> | [Peacock](designs/peacock/DESIGN.md) | Streaming | Black screen, white lowercase wordmark, a stack of colour dots and a gold pill button. | [preview](https://brands.nickharty.com/peacock) |
+| <img src="designs/pear-vc/icon.svg" height="24" alt=""> | [Pear VC](designs/pear-vc/DESIGN.md) | Accelerator | Cream pages, soft green-to-lime gradients, rounded pill buttons and a faceted green pear. | [preview](https://brands.nickharty.com/pear-vc) |
+| <img src="designs/pixar/icon.svg" height="24" alt=""> | [Pixar Animation Studios](designs/pixar/DESIGN.md) | Studio | A quiet white gallery of film art, light Proxima Nova and the serif wordmark. | [preview](https://brands.nickharty.com/pixar) |
+| <img src="designs/pluto-tv/icon.png" height="24" alt=""> | [Pluto TV](designs/pluto-tv/DESIGN.md) | Streaming | Black canvas, highlighter yellow, and a channel guide that scrolls like cable. | [preview](https://brands.nickharty.com/pluto-tv) |
+| <img src="designs/prime-video/icon.png" height="24" alt=""> | [Prime Video](designs/prime-video/DESIGN.md) | Streaming | Midnight blue-black, glowing blue pills, big hero cards: Amazon's 2024 streaming redesign. | [preview](https://brands.nickharty.com/prime-video) |
+| <img src="designs/sony-pictures/icon.svg" height="24" alt=""> | [Sony Pictures](designs/sony-pictures/DESIGN.md) | Studio | Ink-navy and white, condensed uppercase headlines, one cyan accent and the Columbia torch. | [preview](https://brands.nickharty.com/sony-pictures) |
+| <img src="designs/spotify/icon.png" height="24" alt=""> | [Spotify](designs/spotify/DESIGN.md) | Music | Dark, cover-art-led player UI with a single bright green and pill controls. | [preview](https://brands.nickharty.com/spotify) |
+| <img src="designs/storiara/icon.svg" height="24" alt=""> | [Storiara](designs/storiara/DESIGN.md) | Entertainment | Near-black, indigo-lit pre-production software for film and TV crews. | [preview](https://brands.nickharty.com/storiara) |
+| <img src="designs/stripe/icon.png" height="24" alt=""> | [Stripe](designs/stripe/DESIGN.md) | Developer | Precise, light-weight type on white, blurple accents and a flowing gradient hero. | [preview](https://brands.nickharty.com/stripe) |
+| <img src="designs/techstars/icon.svg" height="24" alt=""> | [Techstars](designs/techstars/DESIGN.md) | Accelerator | Bold Suisse type, black and white with a bright green underscore and pill buttons. | [preview](https://brands.nickharty.com/techstars) |
+| <img src="designs/tubi/icon.png" height="24" alt=""> | [Tubi](designs/tubi/DESIGN.md) | Streaming | Deep purple-black, electric yellow, chunky lowercase type: free streaming with attitude. | [preview](https://brands.nickharty.com/tubi) |
+| <img src="designs/universal/icon.svg" height="24" alt=""> | [Universal Pictures](designs/universal/DESIGN.md) | Studio | The globe and arched wordmark in white on near-black, with one bright blue for action. | [preview](https://brands.nickharty.com/universal) |
+| <img src="designs/upenn/icon.svg" height="24" alt=""> | [University of Pennsylvania](designs/upenn/DESIGN.md) | Education | Penn Blue and Penn Red on white, Garamond headlines, and a shield dating to 1740. | [preview](https://brands.nickharty.com/upenn) |
+| <img src="designs/warner-bros/icon.svg" height="24" alt=""> | [Warner Bros.](designs/warner-bros/DESIGN.md) | Studio | Gold-rimmed blue shield on near-black: a classic studio crest rebuilt for screens. | [preview](https://brands.nickharty.com/warner-bros) |
+| <img src="designs/x/icon.png" height="24" alt=""> | [X](designs/x/DESIGN.md) | Social | Black, text-first timeline with Chirp type, hairline dividers and a single sky blue. | [preview](https://brands.nickharty.com/x) |
+| <img src="designs/y-combinator/icon.png" height="24" alt=""> | [Y Combinator](designs/y-combinator/DESIGN.md) | Accelerator | Warm beige paper, serif headlines with italic accents, and the orange Y square. | [preview](https://brands.nickharty.com/y-combinator) |
 
 ## Get a file
 
@@ -72,12 +72,12 @@ From the site: open a brand to copy its curl command, download **DESIGN.md**, th
 From a terminal:
 
 ```bash
-curl -o DESIGN.md https://brands-md.vercel.app/designs/letterboxd/DESIGN.md
-curl -o logo.svg  https://brands-md.vercel.app/designs/letterboxd/logo.svg
-curl -o icon.svg  https://brands-md.vercel.app/designs/letterboxd/icon.svg
+curl -o DESIGN.md https://brands.nickharty.com/designs/letterboxd/DESIGN.md
+curl -o logo.svg  https://brands.nickharty.com/designs/letterboxd/logo.svg
+curl -o icon.svg  https://brands.nickharty.com/designs/letterboxd/icon.svg
 ```
 
-Every file is also listed in [`/designs/index.json`](https://brands-md.vercel.app/designs/index.json), with CORS open, so scripts and agents can fetch the whole library.
+Every file is also listed in [`/designs/index.json`](https://brands.nickharty.com/designs/index.json), with CORS open, so scripts and agents can fetch the whole library.
 
 Or clone this repo. The files live in `designs/<slug>/`: `DESIGN.md`, `logo.svg` and `icon.svg`.
 

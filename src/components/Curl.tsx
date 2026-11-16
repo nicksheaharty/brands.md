@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Check, Copy } from "@phosphor-icons/react";
 
 export function Curl({ slug }: { slug: string }) {
-  const cmd = `curl -o DESIGN.md https://brands-md.vercel.app/designs/${slug}/DESIGN.md`;
+  const cmd = `curl -o DESIGN.md https://brands.nickharty.com/designs/${slug}/DESIGN.md`;
   const [done, setDone] = useState(false);
   return (
     <button
