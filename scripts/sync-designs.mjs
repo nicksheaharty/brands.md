@@ -8,7 +8,7 @@ import sharp from "sharp";
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const src = path.join(root, "designs");
 const out = path.join(root, "public", "designs");
-const site = "https://design.nickharty.com";
+const site = "https://designs-one-lemon.vercel.app";
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });

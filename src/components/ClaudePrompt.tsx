@@ -15,7 +15,7 @@ function ClaudeIcon({ className = "" }: { className?: string }) {
 }
 
 export function claudePrompt(name: string, slug: string) {
-  const base = `https://design.nickharty.com/designs/${slug}`;
+  const base = `https://designs-one-lemon.vercel.app/designs/${slug}`;
   return `Build a design system for this project in the style of ${name}.
 
 1. Download the reference into the repo root:
