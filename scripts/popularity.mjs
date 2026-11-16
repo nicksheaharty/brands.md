@@ -11,6 +11,12 @@ const UA = { "User-Agent": "brands.nickharty.com popularity script (github.com/n
 
 // Brand names that collide with ordinary words or other topics.
 const TITLES = {
+  "abc-news": "ABC News (United States)", alibaba: "Alibaba Group", allstate: "Allstate", blackstone: "Blackstone Inc.",
+  "charles-schwab": "Charles Schwab Corporation", chubb: "Chubb Limited", claude: "Claude (language model)", dbs: "DBS Bank",
+  fortinet: "Fortinet", giftful: null, gowish: null, "jane-street": "Jane Street Capital", kkr: "KKR & Co.",
+  marqeta: "Marqeta", onepay: null, paypal: "PayPal", prudential: "Prudential Financial", recime: null, reddit: "Reddit",
+  robinhood: "Robinhood Markets", santander: "Banco Santander", "state-street": "State Street Corporation",
+  synced: null, synchrony: "Synchrony Financial", uber: "Uber", workday: "Workday, Inc.", zoom: "Zoom Communications",
   stripe: "Stripe, Inc.", mubi: "Mubi (streaming service)", lionsgate: "Lionsgate Studios", antler: "Antler (venture capital firm)",
   x: "Twitter", linear: "Linear (software)", notion: "Notion (productivity software)", neon: "Neon (company)",
   upenn: "University of Pennsylvania", storiara: null, a24: "A24", universal: "Universal Pictures",

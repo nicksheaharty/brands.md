@@ -10,21 +10,145 @@
    "title": "A24",
    "views": 508868
   },
+  "abc-news": {
+   "title": null,
+   "views": 0
+  },
+  "accenture": {
+   "title": "Accenture",
+   "views": 121518
+  },
+  "acorns": {
+   "title": "Acorns (company)",
+   "views": 3643
+  },
+  "adyen": {
+   "title": "Adyen",
+   "views": 16686
+  },
+  "affirm": {
+   "title": "Affirm Holdings",
+   "views": 17500
+  },
+  "aig": {
+   "title": "American International Group",
+   "views": 40482
+  },
   "airbnb": {
    "title": "Airbnb",
    "views": 113262
+  },
+  "al-jazeera": {
+   "title": "Al Jazeera English",
+   "views": 25020
+  },
+  "alibaba": {
+   "title": "Alibaba Group",
+   "views": 104295
+  },
+  "allstate": {
+   "title": "Allstate",
+   "views": 19427
+  },
+  "ally": {
+   "title": "Ally Financial",
+   "views": 20051
   },
   "amazon-mgm-studios": {
    "title": "Amazon MGM Studios",
    "views": 127340
   },
+  "amd": {
+   "title": "AMD",
+   "views": 212700
+  },
+  "american-express": {
+   "title": "American Express",
+   "views": 96444
+  },
   "antler": {
    "title": null,
    "views": 0
   },
+  "apollo": {
+   "title": "Apollo Global Management",
+   "views": 116354
+  },
+  "apple": {
+   "title": "Apple Inc.",
+   "views": 629923
+  },
+  "apple-news": {
+   "title": "Apple News",
+   "views": 36206
+  },
   "apple-tv": {
    "title": "Apple TV (streaming service)",
    "views": 96591
+  },
+  "arm": {
+   "title": "Arm Holdings",
+   "views": 65834
+  },
+  "asml": {
+   "title": "ASML",
+   "views": 135028
+  },
+  "atlassian": {
+   "title": "Atlassian",
+   "views": 62037
+  },
+  "baidu": {
+   "title": "Baidu",
+   "views": 65402
+  },
+  "bank-of-america": {
+   "title": "Bank of America",
+   "views": 136392
+  },
+  "barclays": {
+   "title": "Barclays",
+   "views": 80328
+  },
+  "bbc-news": {
+   "title": "BBC News",
+   "views": 77660
+  },
+  "berkshire-hathaway": {
+   "title": "Berkshire Hathaway",
+   "views": 243491
+  },
+  "betterment": {
+   "title": "Betterment",
+   "views": 456
+  },
+  "blackrock": {
+   "title": "BlackRock",
+   "views": 293331
+  },
+  "blackstone": {
+   "title": "Blackstone Inc.",
+   "views": 120985
+  },
+  "block": {
+   "title": "Block, Inc.",
+   "views": 58733
+  },
+  "brex": {
+   "title": "Brex",
+   "views": 10242
+  },
+  "brown": {
+   "title": "Brown University",
+   "views": 130629
+  },
+  "business-insider": {
+   "title": "Business Insider",
+   "views": 15660
+  },
+  "canva": {
+   "title": "Canva",
+   "views": 241424
   },
   "capcut": {
    "title": "CapCut",
@@ -34,17 +158,121 @@
    "title": "Capital One",
    "views": 78784
   },
+  "cash-app": {
+   "title": "Cash App",
+   "views": 151641
+  },
+  "cbs-news": {
+   "title": "CBS News",
+   "views": 39937
+  },
+  "charles-schwab": {
+   "title": "Charles Schwab Corporation",
+   "views": 47448
+  },
+  "chase": {
+   "title": "Chase Bank",
+   "views": 68533
+  },
+  "chubb": {
+   "title": "Chubb Limited",
+   "views": 22310
+  },
+  "citi": {
+   "title": "Citigroup",
+   "views": 67094
+  },
+  "claude": {
+   "title": "Claude (AI)",
+   "views": 496647
+  },
+  "cloudflare": {
+   "title": "Cloudflare",
+   "views": 123326
+  },
+  "cnbc": {
+   "title": "CNBC",
+   "views": 66403
+  },
+  "cnn": {
+   "title": "CNN",
+   "views": 195138
+  },
+  "columbia": {
+   "title": "Columbia University",
+   "views": 218528
+  },
+  "commonwealth-bank": {
+   "title": "Commonwealth Bank",
+   "views": 25451
+  },
+  "cornell": {
+   "title": "Cornell University",
+   "views": 381375
+  },
+  "costco": {
+   "title": "Costco",
+   "views": 192440
+  },
   "criterion-channel": {
    "title": "The Criterion Collection",
    "views": 62969
+  },
+  "crowdstrike": {
+   "title": "CrowdStrike",
+   "views": 56396
   },
   "crunchyroll": {
    "title": "Crunchyroll",
    "views": 71936
   },
+  "dartmouth": {
+   "title": "Dartmouth College",
+   "views": 133780
+  },
+  "databricks": {
+   "title": "Databricks",
+   "views": 81355
+  },
+  "datadog": {
+   "title": "Datadog",
+   "views": 24584
+  },
+  "dbs": {
+   "title": "DBS Bank",
+   "views": 31120
+  },
+  "deadline": {
+   "title": "Deadline Hollywood",
+   "views": 23088
+  },
+  "dell": {
+   "title": "Dell",
+   "views": 100477
+  },
+  "deutsche-bank": {
+   "title": "Deutsche Bank",
+   "views": 49263
+  },
+  "discord": {
+   "title": "Discord",
+   "views": 275644
+  },
+  "discover": {
+   "title": "Discover Financial",
+   "views": 13432
+  },
   "disney-plus": {
    "title": "Disney+",
    "views": 154420
+  },
+  "dropbox": {
+   "title": "Dropbox",
+   "views": 41109
+  },
+  "electronic-arts": {
+   "title": "Electronic Arts",
+   "views": 173891
   },
   "entrepreneur-first": {
    "title": "Entrepreneurs First",
@@ -54,9 +282,53 @@
    "title": "Facebook",
    "views": 1787661
   },
+  "fidelity": {
+   "title": "Fidelity",
+   "views": 5631
+  },
+  "figma": {
+   "title": "Figma",
+   "views": 62729
+  },
+  "fiserv": {
+   "title": "Fiserv",
+   "views": 21355
+  },
+  "fortinet": {
+   "title": "Fortinet",
+   "views": 21846
+  },
+  "fox": {
+   "title": "Fox Broadcasting Company",
+   "views": 161938
+  },
+  "fox-news": {
+   "title": "Fox News",
+   "views": 151984
+  },
+  "garmin": {
+   "title": "Garmin",
+   "views": 50046
+  },
   "gemini": {
    "title": "Google Gemini",
    "views": 245012
+  },
+  "giftful": {
+   "title": null,
+   "views": 0
+  },
+  "github": {
+   "title": "GitHub",
+   "views": 371628
+  },
+  "gitlab": {
+   "title": "GitLab",
+   "views": 43911
+  },
+  "goldman-sachs": {
+   "title": "Goldman Sachs",
+   "views": 137273
   },
   "google": {
    "title": "Google",
@@ -66,29 +338,113 @@
    "title": null,
    "views": 0
   },
+  "grab": {
+   "title": "Grab Holdings",
+   "views": 35461
+  },
+  "harvard": {
+   "title": "Harvard University",
+   "views": 374935
+  },
   "hbo-max": {
    "title": "HBO Max",
    "views": 133658
+  },
+  "hdfc-bank": {
+   "title": "HDFC Bank",
+   "views": 105409
+  },
+  "hollywood-reporter": {
+   "title": "The Hollywood Reporter",
+   "views": 38885
+  },
+  "hp": {
+   "title": "HP Inc.",
+   "views": 68687
+  },
+  "hsbc": {
+   "title": "HSBC",
+   "views": 136578
+  },
+  "hubspot": {
+   "title": "HubSpot",
+   "views": 30768
   },
   "hulu": {
    "title": "Hulu",
    "views": 122199
   },
+  "ibm": {
+   "title": "IBM",
+   "views": 180300
+  },
+  "ing": {
+   "title": "ING Group",
+   "views": 34382
+  },
   "instagram": {
    "title": "Instagram",
    "views": 2148863
+  },
+  "interactive-brokers": {
+   "title": "Interactive Brokers",
+   "views": 37558
+  },
+  "intuit": {
+   "title": "Intuit",
+   "views": 30135
+  },
+  "jane-street": {
+   "title": "Jane Street Capital",
+   "views": 101160
+  },
+  "jpmorgan": {
+   "title": "JPMorgan Chase",
+   "views": 182372
   },
   "kalshi": {
    "title": "Kalshi",
    "views": 238809
   },
+  "kinoki": {
+   "title": "Detoxification (alternative medicine)",
+   "views": 3198
+  },
+  "kkr": {
+   "title": "KKR & Co.",
+   "views": 62653
+  },
+  "klarna": {
+   "title": "Klarna",
+   "views": 54406
+  },
+  "kraken": {
+   "title": "Kraken (cryptocurrency exchange)",
+   "views": 21305
+  },
+  "la-times": {
+   "title": "Los Angeles Times",
+   "views": 50107
+  },
   "legendary": {
    "title": "Legendary Entertainment",
    "views": 50511
   },
+  "lemonade": {
+   "title": "Lemonade, Inc.",
+   "views": 6239
+  },
+  "lenovo": {
+   "title": "Lenovo",
+   "views": 104874
+  },
   "letterboxd": {
    "title": "Letterboxd",
    "views": 53080
+  },
+  "life360": {
+   "title": "Life360",
+   "views": 19784
   },
   "linear": {
    "title": "Linear Orbit, Inc.",
@@ -98,13 +454,77 @@
    "title": null,
    "views": 0
   },
+  "lloyds": {
+   "title": "Lloyds Bank",
+   "views": 34954
+  },
+  "logitech": {
+   "title": "Logitech",
+   "views": 34686
+  },
+  "lyft": {
+   "title": "Lyft",
+   "views": 30218
+  },
+  "marqeta": {
+   "title": null,
+   "views": 0
+  },
+  "mercadolibre": {
+   "title": "MercadoLibre",
+   "views": 22892
+  },
+  "mercury": {
+   "title": null,
+   "views": 0
+  },
+  "metlife": {
+   "title": "MetLife",
+   "views": 25854
+  },
+  "micron": {
+   "title": "Micrometre",
+   "views": 46297
+  },
   "microsoft": {
    "title": "Microsoft",
    "views": 536084
   },
+  "minecraft": {
+   "title": "Minecraft",
+   "views": 512934
+  },
+  "mongodb": {
+   "title": "MongoDB",
+   "views": 38477
+  },
+  "monzo": {
+   "title": "Monzo",
+   "views": 30672
+  },
+  "moodys": {
+   "title": "Moody's Ratings",
+   "views": 17316
+  },
+  "morgan-stanley": {
+   "title": "Morgan Stanley",
+   "views": 111543
+  },
+  "ms-now": {
+   "title": "MS NOW",
+   "views": 158779
+  },
+  "msci": {
+   "title": "MSCI",
+   "views": 29350
+  },
   "mubi": {
    "title": null,
    "views": 0
+  },
+  "nbc-news": {
+   "title": "NBC News",
+   "views": 39853
   },
   "neon": {
    "title": "Neon (company)",
@@ -114,9 +534,49 @@
    "title": "Netflix",
    "views": 528589
   },
+  "new-york-times": {
+   "title": "The New York Times",
+   "views": 346671
+  },
+  "new-yorker": {
+   "title": "The New Yorker",
+   "views": 75705
+  },
+  "nintendo": {
+   "title": "Nintendo",
+   "views": 273914
+  },
   "notion": {
    "title": "Notion (productivity software)",
    "views": 38495
+  },
+  "npr": {
+   "title": "NPR",
+   "views": 79329
+  },
+  "nubank": {
+   "title": "Nubank",
+   "views": 32928
+  },
+  "nvidia": {
+   "title": "Nvidia",
+   "views": 1594560
+  },
+  "nyse": {
+   "title": "New York Stock Exchange",
+   "views": 99216
+  },
+  "onepay": {
+   "title": null,
+   "views": 0
+  },
+  "palantir": {
+   "title": "Palantir",
+   "views": 333348
+  },
+  "palo-alto-networks": {
+   "title": "Palo Alto Networks",
+   "views": 47799
   },
   "paramount": {
    "title": "Paramount Pictures",
@@ -125,6 +585,14 @@
   "paramount-plus": {
    "title": "Paramount+",
    "views": 130526
+  },
+  "partiful": {
+   "title": "Partiful",
+   "views": 10785
+  },
+  "paypal": {
+   "title": "PayPal",
+   "views": 178800
   },
   "peacock": {
    "title": "Peacock (streaming service)",
@@ -142,21 +610,117 @@
    "title": "Pixar",
    "views": 258784
   },
+  "plaid": {
+   "title": "Plaid Inc.",
+   "views": 15690
+  },
+  "playstation": {
+   "title": "PlayStation",
+   "views": 137615
+  },
   "pluto-tv": {
    "title": "Pluto TV",
    "views": 52810
+  },
+  "politico": {
+   "title": "Politico",
+   "views": 63171
+  },
+  "polymarket": {
+   "title": "Polymarket",
+   "views": 147057
   },
   "prime-video": {
    "title": "Amazon Prime Video",
    "views": 178012
   },
+  "princeton": {
+   "title": "Princeton University",
+   "views": 157651
+  },
+  "progressive": {
+   "title": "Progressive Corporation",
+   "views": 21288
+  },
+  "prudential": {
+   "title": "Prudential Financial",
+   "views": 17466
+  },
+  "qualcomm": {
+   "title": "Qualcomm",
+   "views": 89118
+  },
+  "quince": {
+   "title": "Quince (company)",
+   "views": 33037
+  },
+  "rakuten": {
+   "title": "Rakuten",
+   "views": 52658
+  },
+  "ramp": {
+   "title": "Ramp (company)",
+   "views": 29296
+  },
+  "recime": {
+   "title": null,
+   "views": 0
+  },
+  "reddit": {
+   "title": "Reddit",
+   "views": 567942
+  },
   "reelshort": {
    "title": "ReelShort",
    "views": 17805
   },
+  "robinhood": {
+   "title": "Robinhood (company)",
+   "views": 8015
+  },
+  "roblox": {
+   "title": "Roblox",
+   "views": 1101526
+  },
+  "roku": {
+   "title": "Roku",
+   "views": 48664
+  },
+  "salesforce": {
+   "title": "Salesforce",
+   "views": 122159
+  },
+  "samsung": {
+   "title": "Samsung",
+   "views": 186286
+  },
+  "santander": {
+   "title": "Banco Santander",
+   "views": 28878
+  },
+  "sap": {
+   "title": "SAP",
+   "views": 89871
+  },
+  "semafor": {
+   "title": "Semafor (website)",
+   "views": 17571
+  },
+  "shein": {
+   "title": "Shein",
+   "views": 86785
+  },
   "shopify": {
    "title": "Shopify",
    "views": 77698
+  },
+  "snapchat": {
+   "title": "Snapchat",
+   "views": 239205
+  },
+  "sofi": {
+   "title": "SoFi",
+   "views": 40620
   },
   "sony-pictures": {
    "title": "Sony Pictures",
@@ -166,6 +730,18 @@
    "title": "Spotify",
    "views": 219638
   },
+  "square": {
+   "title": null,
+   "views": 0
+  },
+  "state-street": {
+   "title": "State Street Corporation",
+   "views": 50299
+  },
+  "steam": {
+   "title": "Steam (service)",
+   "views": 157543
+  },
   "storiara": {
    "title": null,
    "views": 0
@@ -173,6 +749,34 @@
   "stripe": {
    "title": "Stripe, Inc.",
    "views": 95400
+  },
+  "substack": {
+   "title": "Substack",
+   "views": 112431
+  },
+  "suno": {
+   "title": "Suno",
+   "views": 61901
+  },
+  "synced": {
+   "title": null,
+   "views": 0
+  },
+  "synchrony": {
+   "title": "Synchrony Financial",
+   "views": 12808
+  },
+  "target": {
+   "title": "Target Corporation",
+   "views": 109709
+  },
+  "td": {
+   "title": "TD Bank (United States)",
+   "views": 20935
+  },
+  "techcrunch": {
+   "title": "TechCrunch",
+   "views": 9730
   },
   "techstars": {
    "title": "Techstars",
@@ -186,6 +790,22 @@
    "title": "Temu",
    "views": 115323
   },
+  "texas-instruments": {
+   "title": "Texas Instruments",
+   "views": 70628
+  },
+  "the-economist": {
+   "title": "The Economist",
+   "views": 62749
+  },
+  "the-guardian": {
+   "title": "The Guardian",
+   "views": 236521
+  },
+  "the-verge": {
+   "title": "The Verge",
+   "views": 15274
+  },
   "threads": {
    "title": "Threads (social network)",
    "views": 65036
@@ -194,13 +814,37 @@
    "title": "TikTok",
    "views": 652011
   },
+  "time": {
+   "title": "Time (magazine)",
+   "views": 83932
+  },
+  "truist": {
+   "title": "Truist",
+   "views": 28095
+  },
+  "tsmc": {
+   "title": "TSMC",
+   "views": 151612
+  },
   "tubi": {
    "title": "Tubi",
    "views": 93490
   },
+  "twilio": {
+   "title": "Twilio",
+   "views": 23502
+  },
+  "two-sigma": {
+   "title": "Two Sigma",
+   "views": 18097
+  },
   "uber": {
    "title": "Uber",
-   "views": 0
+   "views": 132751
+  },
+  "unity": {
+   "title": "Unity Technologies",
+   "views": 25930
   },
   "universal": {
    "title": "Universal Pictures",
@@ -210,13 +854,45 @@
    "title": "University of Pennsylvania",
    "views": 165228
   },
+  "us-bank": {
+   "title": "U.S. Bancorp",
+   "views": 31571
+  },
+  "usa-today": {
+   "title": "USA Today",
+   "views": 35031
+  },
+  "vanguard": {
+   "title": "Vanguard",
+   "views": 16035
+  },
+  "variety": {
+   "title": "Variety (magazine)",
+   "views": 0
+  },
+  "venmo": {
+   "title": "Venmo",
+   "views": 39272
+  },
+  "vercel": {
+   "title": "Vercel",
+   "views": 49752
+  },
   "vinted": {
    "title": "Vinted",
    "views": 77752
   },
+  "visa": {
+   "title": "Visa Inc.",
+   "views": 62437
+  },
   "vizio": {
    "title": "Vizio",
    "views": 17627
+  },
+  "vox": {
+   "title": "Vox (website)",
+   "views": 21536
   },
   "walmart": {
    "title": "Walmart",
@@ -226,9 +902,29 @@
    "title": "Warner Bros.",
    "views": 144473
   },
+  "waymo": {
+   "title": "Waymo",
+   "views": 165795
+  },
+  "wealthfront": {
+   "title": "Wealthfront",
+   "views": 7224
+  },
+  "wells-fargo": {
+   "title": "Wells Fargo",
+   "views": 96982
+  },
   "whatnot": {
    "title": "Whatnot",
    "views": 34342
+  },
+  "wise": {
+   "title": "Wise (company)",
+   "views": 58677
+  },
+  "workday": {
+   "title": "Workday, Inc.",
+   "views": 39746
   },
   "x": {
    "title": "X (social network)",
@@ -238,13 +934,29 @@
    "title": "Grok (chatbot)",
    "views": 153482
   },
+  "xiaomi": {
+   "title": "Xiaomi",
+   "views": 109351
+  },
   "y-combinator": {
    "title": "Y Combinator",
    "views": 101510
   },
+  "yahoo-news": {
+   "title": "Yahoo News",
+   "views": 7644
+  },
+  "yale": {
+   "title": "Yale University",
+   "views": 183217
+  },
   "youtube": {
    "title": "YouTube",
    "views": 3648706
+  },
+  "zoom": {
+   "title": "Zoom Communications",
+   "views": 27500
   }
  }
 }
