@@ -51,7 +51,7 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
         </Link>
 
         <header className="mt-8 flex items-center gap-5 md:gap-6">
-          <AppIcon svg={d.icon} size={88} className="shrink-0" />
+          <AppIcon src={d.icon} size={88} className="shrink-0" eager />
           <div className="min-w-0">
             <h1 className="font-title text-3xl md:text-5xl text-surface leading-tight">{d.name}</h1>
             <a
@@ -95,7 +95,7 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
             className="group relative flex h-36 md:h-44 items-center justify-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-primary/60 transition"
             aria-label={`Download the ${d.name} app icon`}
           >
-            <AppIcon svg={d.icon} size={88} className="!w-16 !h-16 md:!w-[88px] md:!h-[88px] transition-transform group-hover:-translate-y-1" />
+            <AppIcon src={d.icon} size={88} eager className="!w-16 !h-16 md:!w-[88px] md:!h-[88px] transition-transform group-hover:-translate-y-1" />
             <DownloadLabel name={d.iconFile} />
           </a>
         </div>

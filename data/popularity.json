@@ -1,0 +1,170 @@
+{
+ "from": "20260818",
+ "to": "20261115",
+ "brands": {
+  "500-global": {
+   "title": "500 Global",
+   "views": 1911
+  },
+  "a24": {
+   "title": "A24",
+   "views": 508868
+  },
+  "airbnb": {
+   "title": "Airbnb",
+   "views": 113262
+  },
+  "amazon-mgm-studios": {
+   "title": "Amazon MGM Studios",
+   "views": 127340
+  },
+  "antler": {
+   "title": null,
+   "views": 0
+  },
+  "apple-tv": {
+   "title": "Apple TV (streaming service)",
+   "views": 96591
+  },
+  "criterion-channel": {
+   "title": "The Criterion Collection",
+   "views": 62969
+  },
+  "crunchyroll": {
+   "title": "Crunchyroll",
+   "views": 71936
+  },
+  "disney-plus": {
+   "title": "Disney+",
+   "views": 154420
+  },
+  "entrepreneur-first": {
+   "title": "Entrepreneurs First",
+   "views": 3716
+  },
+  "facebook": {
+   "title": "Facebook",
+   "views": 1787661
+  },
+  "hbo-max": {
+   "title": "HBO Max",
+   "views": 133658
+  },
+  "hulu": {
+   "title": "Hulu",
+   "views": 122199
+  },
+  "instagram": {
+   "title": "Instagram",
+   "views": 2148863
+  },
+  "legendary": {
+   "title": "Legendary Entertainment",
+   "views": 50511
+  },
+  "letterboxd": {
+   "title": "Letterboxd",
+   "views": 53080
+  },
+  "linear": {
+   "title": "Linear Orbit, Inc.",
+   "views": 775
+  },
+  "lionsgate": {
+   "title": null,
+   "views": 0
+  },
+  "mubi": {
+   "title": null,
+   "views": 0
+  },
+  "neon": {
+   "title": "Neon (company)",
+   "views": 56450
+  },
+  "netflix": {
+   "title": "Netflix",
+   "views": 528589
+  },
+  "notion": {
+   "title": "Notion (productivity software)",
+   "views": 38495
+  },
+  "paramount": {
+   "title": "Paramount Pictures",
+   "views": 340039
+  },
+  "paramount-plus": {
+   "title": "Paramount+",
+   "views": 130526
+  },
+  "peacock": {
+   "title": "Peacock (streaming service)",
+   "views": 92838
+  },
+  "pear-vc": {
+   "title": "Pear VC",
+   "views": 1859
+  },
+  "pixar": {
+   "title": "Pixar",
+   "views": 258784
+  },
+  "pluto-tv": {
+   "title": "Pluto TV",
+   "views": 52810
+  },
+  "prime-video": {
+   "title": "Amazon Prime Video",
+   "views": 178012
+  },
+  "shopify": {
+   "title": "Shopify",
+   "views": 77698
+  },
+  "sony-pictures": {
+   "title": "Sony Pictures",
+   "views": 92717
+  },
+  "spotify": {
+   "title": "Spotify",
+   "views": 219638
+  },
+  "storiara": {
+   "title": null,
+   "views": 0
+  },
+  "stripe": {
+   "title": "Stripe, Inc.",
+   "views": 95400
+  },
+  "techstars": {
+   "title": "Techstars",
+   "views": 3052
+  },
+  "tubi": {
+   "title": "Tubi",
+   "views": 93490
+  },
+  "universal": {
+   "title": "Universal Pictures",
+   "views": 296493
+  },
+  "upenn": {
+   "title": "University of Pennsylvania",
+   "views": 165228
+  },
+  "warner-bros": {
+   "title": "Warner Bros.",
+   "views": 144473
+  },
+  "x": {
+   "title": "X (social network)",
+   "views": 929279
+  },
+  "y-combinator": {
+   "title": "Y Combinator",
+   "views": 101510
+  }
+ }
+}

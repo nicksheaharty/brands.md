@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
-import { AppIcon } from "@/components/AppIcon";
+import TiltedCard from "@/components/bits/TiltedCard";
 import GlassSurface from "@/components/bits/GlassSurface";
 
 type Item = { slug: string; name: string; icon: string; colors: string[] };
@@ -132,7 +132,27 @@ export function Launchpad({ items }: { items: Item[] }) {
               {pg.map((d) => (
                 <li key={d.slug} className="flex justify-center pt-2">
                   <Link href={`/${d.slug}`} className="launch-item group flex flex-col items-center">
-                    <AppIcon svg={d.icon} className="launch-icon transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-95" />
+                    <TiltedCard
+                      imageSrc={d.icon}
+                      altText=""
+                      containerWidth="var(--icon)"
+                      containerHeight="var(--icon)"
+                      imageWidth="var(--icon)"
+                      imageHeight="var(--icon)"
+                      radius="22.5%"
+                      scaleOnHover={1.14}
+                      rotateAmplitude={16}
+                      glare={0.45}
+                      shadow={0.7}
+                      parallax={0.35}
+                      perspective={500}
+                      showTooltip={false}
+                      flipOnClick={false}
+                      gyroscope={false}
+                      intro={false}
+                      pressable
+                      className="launch-icon app-icon-tilt"
+                    />
                     <span className="mt-2 w-full truncate text-center text-[11px] md:text-[13px] text-surface/75 group-hover:text-surface">{d.name}</span>
                     <span className="mt-1 flex gap-[3px]" aria-hidden>
                       {d.colors.map((c, i) => (

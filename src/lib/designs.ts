@@ -38,6 +38,7 @@ export type Design = {
   body: string;
   raw: string;
   logo: string;
+  /** URL of the icon file served from /public/designs. */
   icon: string;
   /** "icon.png" when an official App Store icon exists, otherwise "icon.svg". */
   iconFile: string;
@@ -46,13 +47,10 @@ export type Design = {
 
 const DIR = path.join(process.cwd(), "designs");
 
-/** Official App Store icon (scripts/fetch-app-icons.mjs) when present, else the vector icon. Returned as inline HTML. */
+/** Official App Store icon (scripts/fetch-app-icons.mjs) when present, else the vector icon. Returned as a URL. */
 function iconFor(slug: string) {
-  if (fs.existsSync(path.join(DIR, slug, "icon.png"))) {
-    return { icon: `<img src="/designs/${slug}/icon.png" alt="" loading="lazy" decoding="async" />`, iconFile: "icon.png" };
-  }
-  const svg = path.join(DIR, slug, "icon.svg");
-  return { icon: fs.existsSync(svg) ? fs.readFileSync(svg, "utf8") : "", iconFile: "icon.svg" };
+  const iconFile = fs.existsSync(path.join(DIR, slug, "icon.png")) ? "icon.png" : "icon.svg";
+  return { icon: `/designs/${slug}/${iconFile}`, iconFile };
 }
 
 function load(slug: string): Design | null {
