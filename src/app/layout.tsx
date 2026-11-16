@@ -2,12 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Sparks } from "@/components/Sparks";
 import { SITE } from "@/lib/site";
 
 const title = "design.md library | Nick Harty";
-const description =
-  "Free, in-depth DESIGN.md files for well-known brands: colors, type, components, logos and an agent-ready prompt. Preview each one and download it for your AI coding agent.";
+const description = "DESIGN.md files and logos for well-known brands, ready to drop into your repo. Great artists steal to learn.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -29,13 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="https://use.typekit.net/pxn1uhe.css" />
       </head>
       <body className="antialiased selection:bg-primary/30 selection:text-primary overflow-x-hidden">
-        <Sparks>
+        <main className="relative min-h-screen flex flex-col">
           <Navigation />
-          <main className="relative min-h-screen flex flex-col pt-24">
-            {children}
-            <Footer />
-          </main>
-        </Sparks>
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

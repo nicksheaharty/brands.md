@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6, .font-title {
 /* Rendered DESIGN.md */
 .prose-design { @apply text-surface/75 font-body text-[15.5px] leading-relaxed; }
 .prose-design h1 { @apply hidden; }
-.prose-design h2 { @apply text-2xl md:text-3xl text-surface mt-16 mb-5 pt-6 border-t border-white/5 lowercase scroll-mt-28; }
+.prose-design h2 { @apply text-xl md:text-2xl text-surface mt-14 mb-4 pt-6 border-t border-white/5 lowercase scroll-mt-28; }
 .prose-design h3 { @apply text-lg text-surface mt-8 mb-3 lowercase; }
 .prose-design h4 { @apply text-base text-surface/90 mt-6 mb-2; }
 .prose-design p { @apply my-4; }

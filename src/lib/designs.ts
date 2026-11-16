@@ -36,6 +36,7 @@ export type Design = {
   body: string;
   raw: string;
   logo: string;
+  icon: string;
   lines: number;
 };
 
@@ -49,7 +50,7 @@ function load(slug: string): Design | null {
   const logoPath = path.join(DIR, slug, "logo.svg");
   const updated = data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : String(data.updated ?? "");
   return {
-    ...(data as Omit<Design, "body" | "raw" | "logo" | "lines" | "updated">),
+    ...(data as Omit<Design, "body" | "raw" | "logo" | "icon" | "lines" | "updated">),
     slug,
     updated,
     colors: data.colors ?? [],
@@ -60,6 +61,7 @@ function load(slug: string): Design | null {
     body: content,
     raw,
     logo: fs.existsSync(logoPath) ? fs.readFileSync(logoPath, "utf8") : "",
+    icon: fs.existsSync(path.join(DIR, slug, "icon.svg")) ? fs.readFileSync(path.join(DIR, slug, "icon.svg"), "utf8") : "",
     lines: raw.split("\n").length,
   };
 }
@@ -80,29 +82,6 @@ export function getDesigns(): Design[] {
 
 export function getDesign(slug: string) {
   return getDesigns().find((d) => d.slug === slug) ?? null;
-}
-
-/** Light summary passed to client components (no markdown body). */
-export function summary(d: Design) {
-  return {
-    name: d.name,
-    slug: d.slug,
-    category: d.category,
-    tagline: d.tagline,
-    logoBackground: d.logoBackground,
-    theme: d.theme,
-    colors: d.colors.slice(0, 6).map((c) => c.hex),
-    lines: d.lines,
-    display: d.fonts?.display?.family ?? "",
-  };
-}
-export type DesignSummary = ReturnType<typeof summary>;
-
-export function googleFontsHref(families: string[]) {
-  const uniq = Array.from(new Set(families.filter(Boolean)));
-  if (!uniq.length) return null;
-  const q = uniq.map((f) => `family=${encodeURIComponent(f).replace(/%20/g, "+")}:wght@400;500;600;700`).join("&");
-  return `https://fonts.googleapis.com/css2?${q}&display=swap`;
 }
 
 export { REPO, SITE } from "./site";
