@@ -1,0 +1,78 @@
+# DESIGN.md spec (for contributors)
+
+Every design lives in `designs/<slug>/` with exactly two files:
+
+- `DESIGN.md`: the design document (YAML frontmatter + markdown body)
+- `logo.svg`: the brand's vector logo (real paths, no embedded raster, has a `viewBox`, no scripts)
+
+The site reads the frontmatter to draw the preview page, so the keys below are required and must be valid YAML.
+
+## Frontmatter
+
+```yaml
+---
+name: Letterboxd                 # display name
+slug: letterboxd                 # same as the folder name
+url: https://letterboxd.com
+category: Social                 # one of: Social, Entertainment, Education, Productivity, Developer, Commerce, Travel, Music
+tagline: "Dark, cinematic, poster-first social diary for film lovers."   # <= 90 chars
+updated: 2026-11-16
+logoBackground: "#14181C"        # a background the logo looks right on
+theme: dark                      # dark | light (the brand's primary UI mode)
+colors:                          # 8-16 entries, most important first. Use real values.
+  - name: Background
+    hex: "#14181C"
+    role: Page background
+  - name: Green
+    hex: "#00E054"
+    role: Primary accent, logged/watched state
+fonts:
+  display:
+    family: "Graphik"            # the real brand font
+    fallback: "Inter"            # closest Google Fonts family (must exist on fonts.google.com)
+    weights: [600, 700]
+  body:
+    family: "Graphik"
+    fallback: "Inter"
+    weights: [400, 600]
+  mono:                          # optional
+    family: "..."
+    fallback: "JetBrains Mono"
+    weights: [400]
+typeScale:                       # 5-8 rows, px values
+  - { role: Display, size: 40, weight: 700, lineHeight: 1.1, tracking: "-0.02em" }
+  - { role: Body, size: 15, weight: 400, lineHeight: 1.5, tracking: "0" }
+radii: { sm: 3, md: 6, lg: 12, pill: 9999 }   # px
+spacing: [4, 8, 12, 16, 24, 32, 48, 64]        # px, the base scale
+shadows:                         # 0-4 entries; use [] for flat systems
+  - { name: Card, value: "0 1px 3px rgba(0,0,0,0.4)" }
+preview:                         # tokens the site uses to draw a sample UI in this brand's style
+  bg: "#14181C"
+  surface: "#2C3440"
+  text: "#FFFFFF"
+  muted: "#9AB"
+  border: "#456"
+  accent: "#00E054"
+  accentText: "#14181C"          # text on top of accent
+  radius: 4                      # px for buttons/cards in the sample
+  buttonStyle: solid             # solid | pill | outline
+---
+```
+
+## Body (markdown)
+
+Use these H2 sections in this order. Write it for an AI coding agent or a designer who must rebuild a UI that feels like the brand. Be specific: hex values, px, weights, real component names. Aim for 250-450 lines.
+
+1. `## 1. Visual Theme & Atmosphere`: the feel, density, what makes it recognisable
+2. `## 2. Color Palette & Roles`: table (Name | Hex | Role), plus semantic/state colors, dark/light mode notes
+3. `## 3. Typography`: families, licensing notes, fallbacks, the full scale table, rules (case, tracking, numerals)
+4. `## 4. Logo & Brand Mark`: construction, clear space, minimum size, color versions, misuse
+5. `## 5. Components`: buttons (all variants + states), inputs, cards, nav, tabs, badges, avatars, modals, lists, plus anything signature to the brand. Give CSS values.
+6. `## 6. Layout & Spacing`: grid, max widths, gutters, breakpoints, density
+7. `## 7. Depth, Elevation & Motion`: shadows, borders, blur, durations, easing
+8. `## 8. Iconography & Imagery`: icon style/stroke, photo/illustration treatment
+9. `## 9. Voice & Microcopy`: tone, casing, sample strings
+10. `## 10. Do's and Don'ts`: bulleted
+11. `## 11. Agent Prompt Guide`: a ready-to-paste prompt paragraph plus a CSS custom-properties block (`:root { --brand-... }`)
+
+Close with a one-line note: values are observed from the public product and published brand guidelines; this file is an unofficial reference and is not affiliated with or endorsed by the brand.
