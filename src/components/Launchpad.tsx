@@ -4,48 +4,57 @@ import Link from "next/link";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
 import { AppIcon } from "@/components/AppIcon";
+import GlassSurface from "@/components/bits/GlassSurface";
 
 type Item = { slug: string; name: string; icon: string; colors: string[] };
 
-function useCells(ref: React.RefObject<HTMLDivElement | null>) {
-  const [cells, setCells] = useState({ cols: 6, rows: 2, icon: 80, cellW: 136 });
-  useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const measure = () => {
-      const w = el.clientWidth;
-      const h = el.clientHeight;
-      const mobile = w < 640;
-      const icon = mobile ? Math.min(68, Math.floor(w / 4) - 22) : 80;
-      // On phones: exactly 4 columns spanning the full width, like a home screen.
-      const cellW = mobile ? w / 4 : icon + 56;
-      const cellH = icon + (w < 640 ? 46 : 58);
-      setCells({ cols: mobile ? 4 : Math.max(1, Math.floor(w / cellW)), rows: Math.max(1, Math.floor(h / cellH)), icon, cellW });
-    };
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    return () => {
-      ro.disconnect();
-    };
-  }, [ref]);
-  return cells;
+/*
+ * Sizing lives in CSS (.launch in globals.css): --cell is the column width, --icon the icon size.
+ * The first paint is therefore already right; JS only decides how many icons fit on one page,
+ * using the same numbers. Keep MOBILE_MAX and the numbers below in sync with globals.css.
+ */
+const MOBILE_MAX = 639;
+const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+
+function measure(el: HTMLElement) {
+  const w = el.clientWidth;
+  const h = el.clientHeight;
+  const mobile = window.innerWidth <= MOBILE_MAX;
+  const icon = mobile ? Math.min(68, (window.innerWidth - 24) / 4 - 22) : 80;
+  const cols = mobile ? 4 : Math.max(1, Math.floor(w / 136));
+  const rowH = icon + (mobile ? 54 : 58); // = --row in globals.css: icon + label + colour dots + padding
+  return { cols, rows: Math.max(1, Math.floor((h - 8) / rowH)) };
 }
 
 export function Launchpad({ items }: { items: Item[] }) {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
+  const [grid, setGrid] = useState<{ cols: number; rows: number } | null>(null);
   const area = useRef<HTMLDivElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
-  const { cols, rows, icon, cellW } = useCells(area);
-  // The search bar spans exactly from the left edge of the first icon to the right edge of the last.
-  const barWidth = cols * cellW - (cellW - icon);
+
+  useIsoLayoutEffect(() => {
+    const el = area.current;
+    if (!el) return;
+    const update = () => {
+      const next = measure(el);
+      setGrid((g) => (g && g.cols === next.cols && g.rows === next.rows ? g : next));
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+    };
+  }, []);
 
   const shown = useMemo(
     () => items.filter((i) => !query || i.name.toLowerCase().includes(query.toLowerCase()) || i.slug.includes(query.toLowerCase())),
     [items, query]
   );
-  const per = cols * rows;
+
+  // Before measuring (server HTML, first paint) everything sits on one page laid out by CSS alone.
+  const per = grid ? grid.cols * grid.rows : shown.length || 1;
   const pages = useMemo(() => {
     const out: Item[][] = [];
     for (let i = 0; i < shown.length; i += per) out.push(shown.slice(i, i + per));
@@ -78,11 +87,15 @@ export function Launchpad({ items }: { items: Item[] }) {
     if (el) el.scrollTo({ left: p * el.clientWidth, behavior: "smooth" });
   };
 
+  const columns = grid ? `repeat(${grid.cols}, var(--cell))` : "repeat(auto-fill, var(--cell))";
+
   return (
-    <div className="flex h-full flex-col px-3 md:px-12">
-      <div className="mx-auto flex w-full max-w-5xl justify-center pt-2 md:pt-4">
-        <div style={{ width: barWidth, maxWidth: "100%" }}>
-        <label className="flex h-[50px] w-full items-center gap-3 rounded-xl bg-white/5 border border-white/10 focus-within:border-primary/50 px-4 backdrop-blur-sm transition-colors">
+    <div className="launch flex h-full flex-col px-3 md:px-12">
+      {/* Same column template as the icons, so the bar spans exactly from the first icon's edge to the last one's. */}
+      <div className="mx-auto grid w-full max-w-5xl justify-center pt-2 md:pt-4" style={{ gridTemplateColumns: columns }}>
+        <div className="launch-bar col-span-full">
+        <GlassSurface width="100%" height={50} borderRadius={14} brightness={40} opacity={0.9} blur={10} backgroundOpacity={0.06} className="ring-1 ring-white/10 focus-within:ring-primary/50 transition-shadow">
+        <label className="flex h-full w-full items-center gap-3 px-4">
           <MagnifyingGlass weight="bold" className="h-4 w-4 text-surface/40 shrink-0" />
           <input
             value={query}
@@ -91,7 +104,7 @@ export function Launchpad({ items }: { items: Item[] }) {
               if (e.key === "Escape") setQuery("");
             }}
             placeholder="search designs"
-            className="flex-1 bg-transparent font-body text-surface placeholder:text-surface/30 outline-none"
+            className="min-w-0 flex-1 bg-transparent font-body text-surface placeholder:text-surface/30 outline-none"
             aria-label="Search designs"
           />
           {query && (
@@ -100,6 +113,7 @@ export function Launchpad({ items }: { items: Item[] }) {
             </button>
           )}
         </label>
+        </GlassSurface>
         </div>
       </div>
 
@@ -107,22 +121,18 @@ export function Launchpad({ items }: { items: Item[] }) {
         <div
           ref={scroller}
           onScroll={(e) => setPage(Math.round(e.currentTarget.scrollLeft / Math.max(1, e.currentTarget.clientWidth)))}
-          className="flex h-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide"
+          className={`flex h-full snap-x snap-mandatory overflow-y-hidden scrollbar-hide ${grid ? "overflow-x-auto" : "overflow-x-hidden"}`}
         >
           {pages.map((pg, pi) => (
             <ul
               key={pi}
-              className="grid h-full w-full shrink-0 snap-start content-start justify-center pt-2"
-              style={{ gridTemplateColumns: `repeat(${cols}, ${cellW}px)`, gridTemplateRows: `repeat(${rows}, auto)` }}
+              className="launch-page grid h-full w-full shrink-0 snap-start content-start justify-center pt-2"
+              style={{ gridTemplateColumns: columns, gridTemplateRows: grid ? `repeat(${grid.rows}, var(--row))` : undefined }}
             >
               {pg.map((d) => (
-                <li key={d.slug} className="flex justify-center py-2">
-                  <Link
-                    href={`/${d.slug}`}
-                    className="group flex flex-col items-center"
-                    style={{ width: icon + 24 }}
-                  >
-                    <AppIcon svg={d.icon} size={icon} className="transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-95" />
+                <li key={d.slug} className="flex justify-center pt-2">
+                  <Link href={`/${d.slug}`} className="launch-item group flex flex-col items-center">
+                    <AppIcon svg={d.icon} className="launch-icon transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-95" />
                     <span className="mt-2 w-full truncate text-center text-[11px] md:text-[13px] text-surface/75 group-hover:text-surface">{d.name}</span>
                     <span className="mt-1 flex gap-[3px]" aria-hidden>
                       {d.colors.map((c, i) => (

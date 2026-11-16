@@ -37,10 +37,21 @@ export type Design = {
   raw: string;
   logo: string;
   icon: string;
+  /** "icon.png" when an official iOS icon exists, otherwise "icon.svg". */
+  iconFile: string;
   lines: number;
 };
 
 const DIR = path.join(process.cwd(), "designs");
+
+/** Official iOS icon (from iOS Icon Gallery) when present, else the vector icon. Returned as inline HTML. */
+function iconFor(slug: string) {
+  if (fs.existsSync(path.join(DIR, slug, "icon.png"))) {
+    return { icon: `<img src="/designs/${slug}/icon.png" alt="" loading="lazy" decoding="async" />`, iconFile: "icon.png" };
+  }
+  const svg = path.join(DIR, slug, "icon.svg");
+  return { icon: fs.existsSync(svg) ? fs.readFileSync(svg, "utf8") : "", iconFile: "icon.svg" };
+}
 
 function load(slug: string): Design | null {
   const file = path.join(DIR, slug, "DESIGN.md");
@@ -50,7 +61,7 @@ function load(slug: string): Design | null {
   const logoPath = path.join(DIR, slug, "logo.svg");
   const updated = data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : String(data.updated ?? "");
   return {
-    ...(data as Omit<Design, "body" | "raw" | "logo" | "icon" | "lines" | "updated">),
+    ...(data as Omit<Design, "body" | "raw" | "logo" | "icon" | "iconFile" | "lines" | "updated">),
     slug,
     updated,
     colors: data.colors ?? [],
@@ -61,7 +72,7 @@ function load(slug: string): Design | null {
     body: content,
     raw,
     logo: fs.existsSync(logoPath) ? fs.readFileSync(logoPath, "utf8") : "",
-    icon: fs.existsSync(path.join(DIR, slug, "icon.svg")) ? fs.readFileSync(path.join(DIR, slug, "icon.svg"), "utf8") : "",
+    ...iconFor(slug),
     lines: raw.split("\n").length,
   };
 }

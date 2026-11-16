@@ -18,7 +18,7 @@ for (const slug of fs.readdirSync(src).sort()) {
   const md = path.join(dir, "DESIGN.md");
   if (!fs.statSync(dir).isDirectory() || !fs.existsSync(md)) continue;
   fs.mkdirSync(path.join(out, slug));
-  for (const file of ["DESIGN.md", "logo.svg", "icon.svg"]) {
+  for (const file of ["DESIGN.md", "logo.svg", "icon.svg", "icon.png"]) {
     if (fs.existsSync(path.join(dir, file))) fs.copyFileSync(path.join(dir, file), path.join(out, slug, file));
   }
   const { data } = matter(fs.readFileSync(md, "utf8"));
@@ -30,7 +30,7 @@ for (const slug of fs.readdirSync(src).sort()) {
     url: data.url,
     design: `${site}/designs/${slug}/DESIGN.md`,
     logo: `${site}/designs/${slug}/logo.svg`,
-    icon: `${site}/designs/${slug}/icon.svg`,
+    icon: `${site}/designs/${slug}/${fs.existsSync(path.join(dir, "icon.png")) ? "icon.png" : "icon.svg"}`,
     page: `${site}/${slug}`,
   });
 }

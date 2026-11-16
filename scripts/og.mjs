@@ -10,13 +10,18 @@ import { chromium } from "playwright-core";
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const dir = path.join(root, "designs");
 const dots = fs.readFileSync(path.join(root, "public/assets/logo-color.svg"), "utf8");
+const iconHtml = (slug) => {
+  const png = path.join(dir, slug, "icon.png");
+  if (fs.existsSync(png)) return `<img src="data:image/png;base64,${fs.readFileSync(png).toString("base64")}" style="display:block;width:100%;height:100%" />`;
+  return fs.readFileSync(path.join(dir, slug, "icon.svg"), "utf8");
+};
 const designs = fs
   .readdirSync(dir)
   .filter((s) => fs.existsSync(path.join(dir, s, "icon.svg")) && fs.existsSync(path.join(dir, s, "DESIGN.md")))
   .sort()
   .map((slug) => {
     const { data } = matter(fs.readFileSync(path.join(dir, slug, "DESIGN.md"), "utf8"));
-    return { slug, name: data.name, tagline: data.tagline, colors: (data.colors ?? []).slice(0, 6).map((c) => c.hex), icon: fs.readFileSync(path.join(dir, slug, "icon.svg"), "utf8") };
+    return { slug, name: data.name, tagline: data.tagline, colors: (data.colors ?? []).slice(0, 6).map((c) => c.hex), icon: iconHtml(slug) };
   });
 
 const frame = `
