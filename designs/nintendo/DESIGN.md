@@ -5,7 +5,6 @@ url: https://nintendo.com
 category: Gaming
 tagline: "Nintendo red on clean white, rounded Geologica type and character art in friendly tiles."
 updated: 2026-11-16
-appStoreId: 1234806557
 logoBackground: "#FFFFFF"
 theme: light
 colors:

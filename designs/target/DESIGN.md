@@ -5,7 +5,6 @@ url: https://target.com
 category: Commerce
 tagline: "Bullseye red on clean white, bold Helvetica, pill buttons and bright deal-driven grids."
 updated: 2026-11-16
-appStoreId: 297430070
 logoBackground: "#FFFFFF"
 theme: light
 colors:

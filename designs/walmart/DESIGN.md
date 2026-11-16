@@ -5,7 +5,6 @@ url: https://walmart.com
 category: Commerce
 tagline: "True-blue retail: bright blue header, yellow Spark, pill buttons, big friendly prices."
 updated: 2026-11-16
-appStoreId: 338137227
 logoBackground: "#FFFFFF"
 theme: light
 colors:

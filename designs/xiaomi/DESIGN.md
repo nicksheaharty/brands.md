@@ -5,7 +5,6 @@ url: https://mi.com
 category: Hardware
 tagline: "Orange squircle, near-black MiSans type and big, glossy product photography on white."
 updated: 2026-11-16
-appStoreId: 957323480
 logoBackground: "#FFFFFF"
 theme: light
 colors:

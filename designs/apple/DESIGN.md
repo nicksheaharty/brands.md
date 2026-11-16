@@ -5,7 +5,6 @@ url: https://apple.com
 category: Hardware
 tagline: "Product-first pages: huge photography, SF Pro headlines, grey tiles, blue pill buttons."
 updated: 2026-11-16
-appStoreId: 375380948
 logoBackground: "#FFFFFF"
 theme: light
 colors:

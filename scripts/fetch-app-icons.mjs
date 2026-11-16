@@ -34,6 +34,9 @@ const APPS = {
   "criterion-channel": 1454275199,
 };
 
+// Rule of thumb, learned the hard way: only the brand's own flagship app, and re-check after
+// holidays (Target, Walmart and SHEIN ship seasonal icons). Side apps (Apple Store, 1.1.1.1,
+// Mi Home, Switch) show the wrong mark, so those brands keep their vector icon.svg instead.
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const only = process.argv.slice(2);
 for (const slug of fs.readdirSync(path.join(root, "designs"))) {

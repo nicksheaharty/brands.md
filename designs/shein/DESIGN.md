@@ -5,7 +5,6 @@ url: https://shein.com
 category: Commerce
 tagline: "Black-and-white fashion storefront, dense product grids and orange-red sale prices."
 updated: 2026-11-16
-appStoreId: 878577184
 logoBackground: "#FFFFFF"
 theme: light
 colors:

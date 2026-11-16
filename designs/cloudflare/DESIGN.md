@@ -5,7 +5,6 @@ url: https://cloudflare.com
 category: Developer
 tagline: "Clean white canvas, Cloudflare orange, Kunst Grotesk headlines and soft pill buttons."
 updated: 2026-11-16
-appStoreId: 1423538627
 logoBackground: "#FFFFFF"
 theme: light
 colors:
