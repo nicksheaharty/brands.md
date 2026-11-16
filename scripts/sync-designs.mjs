@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import sharp from "sharp";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const src = path.join(root, "designs");
@@ -21,6 +22,10 @@ for (const slug of fs.readdirSync(src).sort()) {
   for (const file of ["DESIGN.md", "logo.svg", "icon.svg", "icon.png"]) {
     if (fs.existsSync(path.join(dir, file))) fs.copyFileSync(path.join(dir, file), path.join(out, slug, file));
   }
+  // Grid/page icons are served as small WebP (icon.png stays as the full download).
+  if (fs.existsSync(path.join(dir, "icon.png"))) {
+    await sharp(path.join(dir, "icon.png")).resize(192, 192).webp({ quality: 86 }).toFile(path.join(out, slug, "icon.webp"));
+  }
   const { data } = matter(fs.readFileSync(md, "utf8"));
   index.push({
     name: data.name,
@@ -35,4 +40,19 @@ for (const slug of fs.readdirSync(src).sort()) {
   });
 }
 fs.writeFileSync(path.join(out, "index.json"), JSON.stringify(index, null, 2));
+
+// llms.txt: a plain index of every file, for AI tools and crawlers.
+const llms = [
+  "# Open-Sourced Brands",
+  "",
+  `> Free DESIGN.md design-system files for ${index.length} well-known brands (colors, typography, components, layout, motion, voice, logo and app icon), written for AI coding agents and designers. Unofficial references; not affiliated with the brands.`,
+  "",
+  `Download any file with: curl -o DESIGN.md ${site}/designs/<slug>/DESIGN.md`,
+  "",
+  "## Designs",
+  "",
+  ...index.map((d) => `- [${d.name}](${d.design}): ${d.tagline}`),
+  "",
+].join("\n");
+fs.writeFileSync(path.join(root, "public", "llms.txt"), llms);
 console.log(`synced ${index.length} designs`);

@@ -49,8 +49,9 @@ const DIR = path.join(process.cwd(), "designs");
 
 /** Official App Store icon (scripts/fetch-app-icons.mjs) when present, else the vector icon. Returned as a URL. */
 function iconFor(slug: string) {
-  const iconFile = fs.existsSync(path.join(DIR, slug, "icon.png")) ? "icon.png" : "icon.svg";
-  return { icon: `/designs/${slug}/${iconFile}`, iconFile };
+  const png = fs.existsSync(path.join(DIR, slug, "icon.png"));
+  // Displayed icon: a 192px WebP made from icon.png at build time (scripts/sync-designs.mjs). Download: the original file.
+  return { icon: `/designs/${slug}/${png ? "icon.webp" : "icon.svg"}`, iconFile: png ? "icon.png" : "icon.svg" };
 }
 
 function load(slug: string): Design | null {

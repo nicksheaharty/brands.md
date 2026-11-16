@@ -163,7 +163,7 @@ export function Launchpad({ items }: { items: Item[] }) {
             >
               {pg.map((d) => (
                 <li key={d.slug} className="flex justify-center pt-2">
-                  <Link href={`/${d.slug}`} className="launch-item group flex flex-col items-center">
+                  <Link href={`/${d.slug}`} prefetch={false} className="launch-item group flex flex-col items-center">
                     {tilt ? (
                       <TiltedCard
                         imageSrc={d.icon}

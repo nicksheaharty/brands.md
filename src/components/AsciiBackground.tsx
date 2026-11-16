@@ -19,6 +19,7 @@ export function AsciiBackground() {
         grain={0}
         mouseInteraction={false}
         clickEffect="none"
+        dpr={1}
         fontFamily='ui-monospace, SFMono-Regular, Menlo, monospace'
         className="h-full w-full"
       />

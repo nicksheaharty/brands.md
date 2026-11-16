@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { getDesign, getDesigns } from "@/lib/designs";
 import { renderMarkdown } from "@/lib/markdown";
+import { SITE } from "@/lib/site";
 import { AppIcon } from "@/components/AppIcon";
 import { Curl } from "@/components/Curl";
 import { Swatches } from "@/components/Swatches";
@@ -23,17 +24,26 @@ export function generateStaticParams() {
   return getDesigns().map((d) => ({ slug: d.slug }));
 }
 
+function describe(d: NonNullable<ReturnType<typeof getDesign>>) {
+  const hexes = d.colors.slice(0, 3).map((c) => c.hex.toUpperCase()).join(", ");
+  const font = d.fonts?.display?.family;
+  const text = `${d.name} DESIGN.md: brand colors (${hexes}), ${font ? `${font} type, ` : ""}components, logo and app icon. ${d.tagline}`;
+  return text.length > 300 ? text.slice(0, 297) + "..." : text;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const d = getDesign((await params).slug);
   if (!d) return {};
-  const title = `${d.name} DESIGN.md`;
-  const images = [{ url: `/og/${d.slug}.png`, width: 1200, height: 630, alt: `${d.name} on DESIGN.MD` }];
+  const title = `${d.name} design system: colors, fonts and logo`;
+  const description = describe(d);
+  const images = [{ url: `/og/${d.slug}.png`, width: 1200, height: 630, alt: `${d.name} on Open-Sourced Brands` }];
   return {
     title,
-    description: d.tagline,
+    description,
+    keywords: [`${d.name} design system`, `${d.name} brand colors`, `${d.name} font`, `${d.name} logo`, `${d.name} DESIGN.md`, "DESIGN.md"],
     alternates: { canonical: `/${d.slug}` },
-    openGraph: { title, description: d.tagline, url: `/${d.slug}`, images },
-    twitter: { card: "summary_large_image", title, description: d.tagline, images },
+    openGraph: { type: "article", title: `${d.name} DESIGN.md`, description, url: `/${d.slug}`, images },
+    twitter: { card: "summary_large_image", title: `${d.name} DESIGN.md`, description, images },
   };
 }
 
@@ -42,8 +52,34 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
   const d = getDesign(slug);
   if (!d) notFound();
   const { html } = renderMarkdown(d.body);
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      headline: `${d.name} DESIGN.md`,
+      description: describe(d),
+      url: `${SITE}/${d.slug}`,
+      image: `${SITE}/og/${d.slug}.png`,
+      dateModified: d.updated,
+      inLanguage: "en",
+      license: "https://creativecommons.org/licenses/by/4.0/",
+      author: { "@type": "Person", name: "Nick Harty", url: "https://nickharty.com" },
+      about: { "@type": "Organization", name: d.name, url: d.url, logo: `${SITE}/designs/${d.slug}/logo.svg` },
+      encoding: { "@type": "MediaObject", contentUrl: `${SITE}/designs/${d.slug}/DESIGN.md`, encodingFormat: "text/markdown" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Open-Sourced Brands", item: SITE },
+        { "@type": "ListItem", position: 2, name: d.name, item: `${SITE}/${d.slug}` },
+      ],
+    },
+  ];
 
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <div className="h-full w-full overflow-y-auto overscroll-contain scrollbar-hide px-4 md:px-12 pt-2 pb-16">
       <div className="max-w-4xl mx-auto">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-surface/40 hover:text-primary transition-colors">
@@ -107,5 +143,6 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
         <article className="prose-design mt-12 [&>h2:first-of-type]:mt-0 [&>h2:first-of-type]:border-0 [&>h2:first-of-type]:pt-0" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
+    </>
   );
 }
