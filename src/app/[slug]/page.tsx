@@ -36,13 +36,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!d) return {};
   const title = `${d.name} design system: colors, fonts and logo`;
   const description = describe(d);
-  const images = [{ url: `/og/${d.slug}.png`, width: 1200, height: 630, alt: `${d.name} on Open-Sourced Brands` }];
+  const images = [{ url: `/og/${d.slug}.png`, width: 1200, height: 630, type: "image/png", alt: `${d.name} on Open-Sourced Brands` }];
   return {
     title,
     description,
     keywords: [`${d.name} design system`, `${d.name} brand colors`, `${d.name} font`, `${d.name} logo`, `${d.name} DESIGN.md`, "DESIGN.md"],
     alternates: { canonical: `/${d.slug}` },
-    openGraph: { type: "article", title: `${d.name} DESIGN.md`, description, url: `/${d.slug}`, images },
+    openGraph: { type: "article", siteName: "Open-Sourced Brands", title: `${d.name} DESIGN.md`, description, url: `/${d.slug}`, images },
     twitter: { card: "summary_large_image", title: `${d.name} DESIGN.md`, description, images },
   };
 }
