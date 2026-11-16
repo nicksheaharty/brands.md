@@ -5,6 +5,8 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
 import TiltedCard from "@/components/bits/TiltedCard";
 import { AppIcon } from "@/components/AppIcon";
+import { EmptySketch } from "@/components/EmptySketch";
+import { REPO } from "@/lib/site";
 import GlassSurface from "@/components/bits/GlassSurface";
 
 type Item = { slug: string; name: string; icon: string; colors: string[] };
@@ -131,6 +133,23 @@ export function Launchpad({ items }: { items: Item[] }) {
       </div>
 
       <div ref={area} className="relative mx-auto mt-4 md:mt-8 w-full max-w-5xl flex-1 min-h-0">
+        {!shown.length && (
+                <div className="absolute inset-0 flex flex-col items-center pt-6 md:pt-10 text-center">
+                  <EmptySketch className="w-40 md:w-48 h-auto" />
+                  <p className="mt-5 font-title text-xl md:text-2xl lowercase text-surface">brand not added yet.</p>
+                  <p className="mt-2 max-w-xs font-body text-sm lowercase text-surface/50">
+                    no design.md for &ldquo;{query}&rdquo; in the library so far.
+                  </p>
+                  <a
+                    href={`${REPO}/issues/new?title=${encodeURIComponent(`Add ${query}`)}&body=${encodeURIComponent(`Please add a DESIGN.md for ${query}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost btn-sm mt-3"
+                  >
+                    request it on github
+                  </a>
+                </div>
+        )}
         <div
           ref={scroller}
           onScroll={(e) => setPage(Math.round(e.currentTarget.scrollLeft / Math.max(1, e.currentTarget.clientWidth)))}
@@ -179,7 +198,6 @@ export function Launchpad({ items }: { items: Item[] }) {
                   </Link>
                 </li>
               ))}
-              {!pg.length && <li className="col-span-full text-center text-surface/40 font-body lowercase">nothing called that yet.</li>}
             </ul>
           ))}
         </div>
