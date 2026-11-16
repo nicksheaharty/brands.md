@@ -7,6 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { chromium } from "playwright-core";
+import { execSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const dir = path.join(root, "designs");
@@ -16,8 +17,11 @@ const iconHtml = (slug) => {
   if (fs.existsSync(png)) return `<img src="data:image/png;base64,${fs.readFileSync(png).toString("base64")}" style="display:block;width:100%;height:100%" />`;
   return fs.readFileSync(path.join(dir, slug, "icon.svg"), "utf8");
 };
+// Only brands that are committed (or named on the command line) count, so in-progress folders stay out.
+const tracked = new Set(execSync("git ls-files designs", { cwd: root }).toString().split("\n").map((f) => f.split("/")[1]).filter(Boolean));
 const designs = fs
   .readdirSync(dir)
+  .filter((s) => tracked.has(s) || process.argv.slice(2).includes(s))
   .filter((s) => !process.argv.slice(2).length || process.argv.slice(2).includes(s))
   .filter((s) => fs.existsSync(path.join(dir, s, "icon.svg")) && fs.existsSync(path.join(dir, s, "DESIGN.md")))
   .sort()
@@ -53,10 +57,9 @@ const chrome = `<div class="ascii">${ascii}</div><span class="b tl"></span><span
 const siteHtml = () => {
   const wall = designs.concat(designs, designs).slice(0, 30);
   return `<!doctype html><html><head>${frame}</head><body>${chrome}
-  <div class="rec" style="background:#090200cc;padding:4px 8px;border-radius:6px"><i></i>REC</div>
-  <div style="position:absolute;left:84px;top:150px;width:560px;z-index:4">
+    <div style="position:absolute;left:84px;top:120px;width:600px;z-index:4">
     <div style="height:46px;width:184px">${dots.replace("<svg", '<svg style="height:46px;width:auto"')}</div>
-    <div class="title" style="font-size:92px;line-height:1;margin-top:34px">DESIGN.MD</div>
+    <div class="title" style="font-size:66px;line-height:1;margin-top:30px;white-space:nowrap">OPEN-SOURCED<br/>BRANDS</div>
     <div style="font-size:34px;font-style:italic;color:#FF9670;margin-top:22px">great artists steal to learn.</div>
     <div style="font:20px ui-monospace,Menlo,monospace;color:rgba(255,239,234,.5);margin-top:40px">${designs.length} brands · design.nickharty.com</div>
   </div>
@@ -64,15 +67,13 @@ const siteHtml = () => {
     ${wall.map((d) => `<div class="icon" style="width:112px;height:112px">${d.icon}</div>`).join("")}
   </div>
   <div style="position:absolute;left:640px;top:0;bottom:0;width:220px;z-index:3;background:linear-gradient(90deg,#090200 20%,transparent)"></div>
-  <div class="meta" style="background:#090200cc;padding:4px 8px;border-radius:6px">ISO 100 · f/1.4 · 1/48</div>
   </body></html>`;
 };
 
 const designHtml = (d) => `<!doctype html><html><head>${frame}</head><body>${chrome}
-  <div class="rec"><i></i>REC</div>
   <div style="position:absolute;left:92px;top:92px;display:flex;align-items:center;gap:16px">
     <div style="height:30px;width:120px">${dots.replace("<svg", '<svg style="height:30px;width:auto"')}</div>
-    <span class="title" style="font-size:26px">DESIGN.MD</span>
+    <span class="title" style="font-size:24px">OPEN-SOURCED BRANDS</span>
   </div>
   <div style="position:absolute;left:92px;top:200px;display:flex;align-items:center;gap:48px">
     <div class="icon" style="width:230px;height:230px">${d.icon}</div>
