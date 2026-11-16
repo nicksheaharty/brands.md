@@ -15,10 +15,12 @@ function useCells(ref: React.RefObject<HTMLDivElement | null>) {
     const measure = () => {
       const w = el.clientWidth;
       const h = el.clientHeight;
-      const icon = w < 640 ? 60 : 80;
-      const cellW = icon + (w < 640 ? 28 : 56);
+      const mobile = w < 640;
+      const icon = mobile ? Math.min(68, Math.floor(w / 4) - 22) : 80;
+      // On phones: exactly 4 columns spanning the full width, like a home screen.
+      const cellW = mobile ? w / 4 : icon + 56;
       const cellH = icon + (w < 640 ? 46 : 58);
-      setCells({ cols: Math.max(1, Math.floor(w / cellW)), rows: Math.max(1, Math.floor(h / cellH)), icon, cellW });
+      setCells({ cols: mobile ? 4 : Math.max(1, Math.floor(w / cellW)), rows: Math.max(1, Math.floor(h / cellH)), icon, cellW });
     };
     measure();
     const ro = new ResizeObserver(measure);
@@ -77,7 +79,7 @@ export function Launchpad({ items }: { items: Item[] }) {
   };
 
   return (
-    <div className="flex h-full flex-col px-4 md:px-12">
+    <div className="flex h-full flex-col px-3 md:px-12">
       <div className="mx-auto flex w-full max-w-5xl justify-center pt-2 md:pt-4">
         <div style={{ width: barWidth, maxWidth: "100%" }}>
         <label className="flex h-[50px] w-full items-center gap-3 rounded-xl bg-white/5 border border-white/10 focus-within:border-primary/50 px-4 backdrop-blur-sm transition-colors">

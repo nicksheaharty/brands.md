@@ -44,7 +44,7 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
   const { html } = renderMarkdown(d.body);
 
   return (
-    <div className="h-full w-full overflow-y-auto overscroll-contain scrollbar-hide px-6 md:px-12 pt-2 pb-16">
+    <div className="h-full w-full overflow-y-auto overscroll-contain scrollbar-hide px-4 md:px-12 pt-2 pb-16">
       <div className="max-w-4xl mx-auto">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-surface/40 hover:text-primary transition-colors">
           <ArrowLeft weight="bold" className="w-4 h-4" /> all designs
@@ -68,10 +68,11 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
 
         <div className="mt-8 flex flex-col gap-3">
           <Curl slug={d.slug} />
-          <div>
+          <div className="flex flex-wrap gap-3">
             <a href={`/designs/${d.slug}/DESIGN.md`} download={`${d.slug}-DESIGN.md`} className="btn btn-primary btn-sm">
               <DownloadSimple weight="bold" className="w-4 h-4" /> DESIGN.md
             </a>
+            <ClaudePrompt name={d.name} slug={d.slug} />
           </div>
         </div>
 
@@ -98,10 +99,6 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
             <AppIcon svg={d.icon} size={88} className="!w-16 !h-16 md:!w-[88px] md:!h-[88px] transition-transform group-hover:-translate-y-1" />
             <DownloadLabel name="icon.svg" />
           </a>
-        </div>
-
-        <div className="mt-3">
-          <ClaudePrompt name={d.name} slug={d.slug} />
         </div>
 
         <div className="mt-12">
