@@ -1,7 +1,8 @@
 // Renders social preview images with local Chrome:
 //   public/og.png            the site card
 //   public/og/<slug>.png     one per design
-// Run: node scripts/og.mjs   (needs Google Chrome installed)
+// Run: node scripts/og.mjs [slug ...]   (needs Google Chrome installed)
+// With slugs, only those design cards are rendered and the site card is left alone.
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
@@ -17,6 +18,7 @@ const iconHtml = (slug) => {
 };
 const designs = fs
   .readdirSync(dir)
+  .filter((s) => !process.argv.slice(2).length || process.argv.slice(2).includes(s))
   .filter((s) => fs.existsSync(path.join(dir, s, "icon.svg")) && fs.existsSync(path.join(dir, s, "DESIGN.md")))
   .sort()
   .map((slug) => {
@@ -91,7 +93,8 @@ const shoot = async (html, out) => {
   await page.screenshot({ path: out });
 };
 fs.mkdirSync(path.join(root, "public/og"), { recursive: true });
-await shoot(siteHtml(), path.join(root, "public/og.png"));
-for (const d of designs) await shoot(designHtml(d), path.join(root, "public/og", `${d.slug}.png`));
+const only = process.argv.slice(2);
+if (!only.length) await shoot(siteHtml(), path.join(root, "public/og.png"));
+for (const d of designs.filter((d) => !only.length || only.includes(d.slug))) await shoot(designHtml(d), path.join(root, "public/og", `${d.slug}.png`));
 await browser.close();
 console.log(`og.png + ${designs.length} design cards`);
