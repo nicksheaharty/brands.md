@@ -12,7 +12,7 @@
 
 ![The design.md library home page](public/og.png)
 
-`DESIGN.md` files for brands people study: the big Hollywood studios, YC and the major accelerators, and products like Letterboxd, Instagram and Stripe. Each one covers a brand's colors, type, components, spacing, motion, voice and logo, and ends with a prompt and CSS variables for a coding agent. Every design ships with its vector logo and a square app icon (the official iOS icon from [iOS Icon Gallery](https://www.iosicongallery.com) where one exists, otherwise a vector icon).
+`DESIGN.md` files for brands people study: the big Hollywood studios, YC and the major accelerators, and products like Letterboxd, Instagram and Stripe. Each one covers a brand's colors, type, components, spacing, motion, voice and logo, and ends with a prompt and CSS variables for a coding agent. Every design ships with its vector logo and a square app icon (the brand's official App Store icon, pulled with Apple's iTunes Lookup API by `scripts/fetch-app-icons.mjs`, where the brand has its own app; otherwise a vector icon).
 
 Drop a `DESIGN.md` at the root of a project and Claude Code, Cursor, Codex or any agent that reads repo context will pick it up. Then ask for the look:
 

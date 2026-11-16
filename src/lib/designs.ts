@@ -39,14 +39,14 @@ export type Design = {
   raw: string;
   logo: string;
   icon: string;
-  /** "icon.png" when an official iOS icon exists, otherwise "icon.svg". */
+  /** "icon.png" when an official App Store icon exists, otherwise "icon.svg". */
   iconFile: string;
   lines: number;
 };
 
 const DIR = path.join(process.cwd(), "designs");
 
-/** Official iOS icon (from iOS Icon Gallery) when present, else the vector icon. Returned as inline HTML. */
+/** Official App Store icon (scripts/fetch-app-icons.mjs) when present, else the vector icon. Returned as inline HTML. */
 function iconFor(slug: string) {
   if (fs.existsSync(path.join(DIR, slug, "icon.png"))) {
     return { icon: `<img src="/designs/${slug}/icon.png" alt="" loading="lazy" decoding="async" />`, iconFile: "icon.png" };
