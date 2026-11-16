@@ -13,6 +13,7 @@ The site reads the frontmatter (name, tagline, colors), so the keys below are re
 ```yaml
 ---
 name: Letterboxd                 # display name
+shortName: Letterboxd            # optional, label under the home-screen icon (keep it to ~12 characters)
 slug: letterboxd                 # same as the folder name
 url: https://letterboxd.com
 category: Social                 # one of: Social, Entertainment, Studio, Accelerator, Education, Productivity, Developer, Commerce, Travel, Music

@@ -1,5 +1,6 @@
 ---
 name: Sony Pictures
+shortName: "Sony Pictures"
 slug: sony-pictures
 url: https://www.sonypictures.com
 category: Studio

@@ -1,5 +1,6 @@
 ---
 name: Universal Pictures
+shortName: "Universal"
 slug: universal
 url: https://www.universalpictures.com
 category: Studio

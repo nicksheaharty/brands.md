@@ -19,6 +19,8 @@ export type Preview = {
 
 export type Design = {
   name: string;
+  /** Optional label for the home grid when the full name is long. */
+  shortName?: string;
   slug: string;
   url: string;
   category: string;

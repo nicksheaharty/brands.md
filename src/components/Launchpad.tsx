@@ -94,7 +94,7 @@ export function Launchpad({ items }: { items: Item[] }) {
       {/* Same column template as the icons, so the bar spans exactly from the first icon's edge to the last one's. */}
       <div className="mx-auto grid w-full max-w-5xl justify-center pt-2 md:pt-4" style={{ gridTemplateColumns: columns }}>
         <div className="launch-bar col-span-full">
-        <GlassSurface width="100%" height={50} borderRadius={14} brightness={40} opacity={0.9} blur={10} backgroundOpacity={0.06} className="ring-1 ring-white/10 focus-within:ring-primary/50 transition-shadow">
+        <GlassSurface width="100%" height={50} borderRadius={14} borderWidth={0.02} brightness={40} opacity={0.9} blur={10} backgroundOpacity={0.06} className="!shadow-[inset_0_0_0_1px_rgba(255,239,234,0.1)] focus-within:!shadow-[inset_0_0_0_1px_rgba(255,150,112,0.45)]">
         <label className="flex h-full w-full items-center gap-3 px-4">
           <MagnifyingGlass weight="bold" className="h-4 w-4 text-surface/40 shrink-0" />
           <input

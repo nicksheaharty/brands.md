@@ -1,5 +1,6 @@
 ---
 name: Amazon MGM Studios
+shortName: "Amazon MGM"
 slug: amazon-mgm-studios
 url: https://www.mgm.com
 category: Studio

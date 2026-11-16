@@ -12,7 +12,7 @@
 
 ![The design.md library home page](public/og.png)
 
-`DESIGN.md` files for brands people study: Letterboxd, Instagram, Stripe, Penn and more. Each one covers a brand's colors, type, components, spacing, motion, voice and logo, and ends with a prompt and CSS variables for a coding agent. Every design ships with its vector logo and a square app icon.
+`DESIGN.md` files for brands people study: the big Hollywood studios, YC and the major accelerators, and products like Letterboxd, Instagram and Stripe. Each one covers a brand's colors, type, components, spacing, motion, voice and logo, and ends with a prompt and CSS variables for a coding agent. Every design ships with its vector logo and a square app icon (the official iOS icon from [iOS Icon Gallery](https://www.iosicongallery.com) where one exists, otherwise a vector icon).
 
 Drop a `DESIGN.md` at the root of a project and Claude Code, Cursor, Codex or any agent that reads repo context will pick it up. Then ask for the look:
 
@@ -24,22 +24,39 @@ Build the settings page following DESIGN.md.
 
 | | Brand | Category | In one line | |
 |---|---|---|---|---|
-| <img src="designs/airbnb/icon.svg" height="24" alt=""> | [Airbnb](designs/airbnb/DESIGN.md) | Travel | Warm, photo-led white canvas with one coral-pink accent and soft rounded cards. | [preview](https://design.nickharty.com/airbnb) |
-| <img src="designs/facebook/icon.svg" height="24" alt=""> | [Facebook](designs/facebook/DESIGN.md) | Social | Friendly, dense, blue-and-grey feed UI built for billions of daily scrolls. | [preview](https://design.nickharty.com/facebook) |
-| <img src="designs/instagram/icon.svg" height="24" alt=""> | [Instagram](designs/instagram/DESIGN.md) | Social | Photo-first, chrome-light grid with a warm gradient glyph and one action blue. | [preview](https://design.nickharty.com/instagram) |
+| <img src="designs/500-global/icon.svg" height="24" alt=""> | [500 Global](designs/500-global/DESIGN.md) | Accelerator | Cream paper, deep teal ink, light serif headlines and a lime highlighter accent. | [preview](https://design.nickharty.com/500-global) |
+| <img src="designs/a24/icon.svg" height="24" alt=""> | [A24](designs/a24/DESIGN.md) | Studio | Warm black, square corners, one grotesque and the poster doing all the talking. | [preview](https://design.nickharty.com/a24) |
+| <img src="designs/airbnb/icon.png" height="24" alt=""> | [Airbnb](designs/airbnb/DESIGN.md) | Travel | Warm, photo-led white canvas with one coral-pink accent and soft rounded cards. | [preview](https://design.nickharty.com/airbnb) |
+| <img src="designs/amazon-mgm-studios/icon.svg" height="24" alt=""> | [Amazon MGM Studios](designs/amazon-mgm-studios/DESIGN.md) | Studio | Gold, widely spaced capitals on black, with MGM's lion heritage behind them. | [preview](https://design.nickharty.com/amazon-mgm-studios) |
+| <img src="designs/antler/icon.svg" height="24" alt=""> | [Antler](designs/antler/DESIGN.md) | Accelerator | Warm off-white pages, black square-cornered buttons that flash red, a pale mint accent. | [preview](https://design.nickharty.com/antler) |
+| <img src="designs/disney/icon.svg" height="24" alt=""> | [Disney](designs/disney/DESIGN.md) | Studio | Signature script, castle and a clear Disney blue on bright, image-led pages. | [preview](https://design.nickharty.com/disney) |
+| <img src="designs/entrepreneur-first/icon.svg" height="24" alt=""> | [Entrepreneurs First](designs/entrepreneur-first/DESIGN.md) | Accelerator | Huge uppercase serif headlines, violet and orange blocks, square corners and arrow links. | [preview](https://design.nickharty.com/entrepreneur-first) |
+| <img src="designs/facebook/icon.png" height="24" alt=""> | [Facebook](designs/facebook/DESIGN.md) | Social | Friendly, dense, blue-and-grey feed UI built for billions of daily scrolls. | [preview](https://design.nickharty.com/facebook) |
+| <img src="designs/instagram/icon.png" height="24" alt=""> | [Instagram](designs/instagram/DESIGN.md) | Social | Photo-first, chrome-light grid with a warm gradient glyph and one action blue. | [preview](https://design.nickharty.com/instagram) |
+| <img src="designs/legendary/icon.svg" height="24" alt=""> | [Legendary Entertainment](designs/legendary/DESIGN.md) | Studio | Midnight navy, uppercase Gotham and kaiju-scale video heroes from the Dune studio. | [preview](https://design.nickharty.com/legendary) |
 | <img src="designs/letterboxd/icon.svg" height="24" alt=""> | [Letterboxd](designs/letterboxd/DESIGN.md) | Social | Dark, cinematic, poster-first social diary for film lovers. | [preview](https://design.nickharty.com/letterboxd) |
-| <img src="designs/linear/icon.svg" height="24" alt=""> | [Linear](designs/linear/DESIGN.md) | Productivity | Near-black, precise and fast: Inter at odd weights, hairline borders, indigo accents. | [preview](https://design.nickharty.com/linear) |
-| <img src="designs/netflix/icon.svg" height="24" alt=""> | [Netflix](designs/netflix/DESIGN.md) | Entertainment | Black canvas, red signal, wall-to-wall artwork: a streaming UI built for the couch. | [preview](https://design.nickharty.com/netflix) |
+| <img src="designs/linear/icon.png" height="24" alt=""> | [Linear](designs/linear/DESIGN.md) | Productivity | Near-black, precise and fast: Inter at odd weights, hairline borders, indigo accents. | [preview](https://design.nickharty.com/linear) |
+| <img src="designs/lionsgate/icon.svg" height="24" alt=""> | [Lionsgate](designs/lionsgate/DESIGN.md) | Studio | Black screen, heavy white wordmark, steel-blue glow: a franchise studio built on key art. | [preview](https://design.nickharty.com/lionsgate) |
+| <img src="designs/neon/icon.svg" height="24" alt=""> | [NEON](designs/neon/DESIGN.md) | Studio | White page, black type shouting in condensed caps, and a tube-lit wordmark. | [preview](https://design.nickharty.com/neon) |
+| <img src="designs/netflix/icon.png" height="24" alt=""> | [Netflix](designs/netflix/DESIGN.md) | Entertainment | Black canvas, red signal, wall-to-wall artwork: a streaming UI built for the couch. | [preview](https://design.nickharty.com/netflix) |
 | <img src="designs/notion/icon.svg" height="24" alt=""> | [Notion](designs/notion/DESIGN.md) | Productivity | Quiet, paper-like workspace: warm greys, black ink, one blue, hand-drawn people. | [preview](https://design.nickharty.com/notion) |
+| <img src="designs/paramount/icon.svg" height="24" alt=""> | [Paramount](designs/paramount/DESIGN.md) | Studio | A snow-capped peak under an arc of stars, in deep navy and Paramount blue. | [preview](https://design.nickharty.com/paramount) |
+| <img src="designs/pear-vc/icon.svg" height="24" alt=""> | [Pear VC](designs/pear-vc/DESIGN.md) | Accelerator | Cream pages, soft green-to-lime gradients, rounded pill buttons and a faceted green pear. | [preview](https://design.nickharty.com/pear-vc) |
+| <img src="designs/pixar/icon.svg" height="24" alt=""> | [Pixar Animation Studios](designs/pixar/DESIGN.md) | Studio | A quiet white gallery of film art, light Proxima Nova and the serif wordmark. | [preview](https://design.nickharty.com/pixar) |
+| <img src="designs/sony-pictures/icon.svg" height="24" alt=""> | [Sony Pictures](designs/sony-pictures/DESIGN.md) | Studio | Ink-navy and white, condensed uppercase headlines, one cyan accent and the Columbia torch. | [preview](https://design.nickharty.com/sony-pictures) |
 | <img src="designs/spotify/icon.svg" height="24" alt=""> | [Spotify](designs/spotify/DESIGN.md) | Music | Dark, cover-art-led player UI with a single bright green and pill controls. | [preview](https://design.nickharty.com/spotify) |
 | <img src="designs/storiara/icon.svg" height="24" alt=""> | [Storiara](designs/storiara/DESIGN.md) | Entertainment | Near-black, indigo-lit pre-production software for film and TV crews. | [preview](https://design.nickharty.com/storiara) |
-| <img src="designs/stripe/icon.svg" height="24" alt=""> | [Stripe](designs/stripe/DESIGN.md) | Developer | Precise, light-weight type on white, blurple accents and a flowing gradient hero. | [preview](https://design.nickharty.com/stripe) |
+| <img src="designs/stripe/icon.png" height="24" alt=""> | [Stripe](designs/stripe/DESIGN.md) | Developer | Precise, light-weight type on white, blurple accents and a flowing gradient hero. | [preview](https://design.nickharty.com/stripe) |
+| <img src="designs/techstars/icon.svg" height="24" alt=""> | [Techstars](designs/techstars/DESIGN.md) | Accelerator | Bold Suisse type, black and white with a bright green underscore and pill buttons. | [preview](https://design.nickharty.com/techstars) |
+| <img src="designs/universal/icon.svg" height="24" alt=""> | [Universal Pictures](designs/universal/DESIGN.md) | Studio | The globe and arched wordmark in white on near-black, with one bright blue for action. | [preview](https://design.nickharty.com/universal) |
 | <img src="designs/upenn/icon.svg" height="24" alt=""> | [University of Pennsylvania](designs/upenn/DESIGN.md) | Education | Penn Blue and Penn Red on white, Garamond headlines, and a shield dating to 1740. | [preview](https://design.nickharty.com/upenn) |
+| <img src="designs/warner-bros/icon.svg" height="24" alt=""> | [Warner Bros.](designs/warner-bros/DESIGN.md) | Studio | Gold-rimmed blue shield on near-black: a classic studio crest rebuilt for screens. | [preview](https://design.nickharty.com/warner-bros) |
 | <img src="designs/x/icon.svg" height="24" alt=""> | [X](designs/x/DESIGN.md) | Social | Black, text-first timeline with Chirp type, hairline dividers and a single sky blue. | [preview](https://design.nickharty.com/x) |
+| <img src="designs/y-combinator/icon.svg" height="24" alt=""> | [Y Combinator](designs/y-combinator/DESIGN.md) | Accelerator | Warm beige paper, serif headlines with italic accents, and the orange Y square. | [preview](https://design.nickharty.com/y-combinator) |
 
 ## Get a file
 
-From the site: copy the curl command at the top of any page, or open a brand and download **DESIGN.md**, **logo.svg** or **icon.svg**.
+From the site: open a brand to copy its curl command, download **DESIGN.md**, the logo or the icon, or hit **Add to Claude** to open a Claude chat with a prompt that builds a design system from the file.
 
 From a terminal:
 

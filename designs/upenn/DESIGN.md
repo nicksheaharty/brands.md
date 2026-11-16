@@ -1,5 +1,6 @@
 ---
 name: University of Pennsylvania
+shortName: "Penn"
 slug: upenn
 url: https://www.upenn.edu
 category: Education
