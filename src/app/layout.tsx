@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   title: { default: title, template: "%s | DESIGN.MD" },
   description,
   icons: { icon: "/icon.svg" },
-  openGraph: { type: "website", siteName: "DESIGN.MD", title, description, url: SITE, images: ["/og.png"] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { type: "website", siteName: "DESIGN.MD", title, description, url: SITE, images: [{ url: "/og.png", width: 1200, height: 630, alt: "DESIGN.MD: great artists steal to learn." }] },
+  twitter: { card: "summary_large_image", title, description, images: [{ url: "/og.png", width: 1200, height: 630, alt: "DESIGN.MD: great artists steal to learn." }] },
 };
 
 export const viewport: Viewport = { themeColor: "#090200" };

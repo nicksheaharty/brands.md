@@ -26,7 +26,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const d = getDesign((await params).slug);
   if (!d) return {};
-  return { title: `${d.name} DESIGN.md`, description: d.tagline, alternates: { canonical: `/${d.slug}` } };
+  const title = `${d.name} DESIGN.md`;
+  const images = [{ url: `/og/${d.slug}.png`, width: 1200, height: 630, alt: `${d.name} on DESIGN.MD` }];
+  return {
+    title,
+    description: d.tagline,
+    alternates: { canonical: `/${d.slug}` },
+    openGraph: { title, description: d.tagline, url: `/${d.slug}`, images },
+    twitter: { card: "summary_large_image", title, description: d.tagline, images },
+  };
 }
 
 export default async function DesignPage({ params }: { params: Promise<{ slug: string }> }) {

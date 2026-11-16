@@ -75,7 +75,7 @@ The full format is in [SPEC.md](SPEC.md).
 
 1. Make `designs/<slug>/` with a `DESIGN.md` that follows [SPEC.md](SPEC.md) and a clean `logo.svg` (vector only, has a viewBox, no scripts or embedded images).
 2. Add the brand to `scripts/make-icons.py` and run `python3 scripts/make-icons.py` to build its `icon.svg`.
-3. Run `npm run dev` and check `/<slug>`. The icon, page and downloads come from those files with no other code changes.
+3. Run `node scripts/og.mjs` to render its social preview card, then `npm run dev` and check `/<slug>`. The icon, page and downloads come from those files with no other code changes.
 4. Open a pull request. Say where your values came from (live CSS, published brand guidelines) and flag anything you guessed.
 
 ## Running the site
@@ -86,7 +86,7 @@ npm run dev     # http://localhost:3000
 npm run build
 ```
 
-Next.js 15 (App Router, every page static) and Tailwind 3, styled after [nickharty.com](https://nickharty.com). `scripts/sync-designs.mjs` copies the files into `public/designs` before every build. Hosted on Vercel.
+Next.js 15 (App Router, every page static) and Tailwind 3, styled after [nickharty.com](https://nickharty.com). `scripts/sync-designs.mjs` copies the files into `public/designs` before every build. `node scripts/og.mjs` renders the social preview cards (`public/og.png` and `public/og/<slug>.png`) with local Chrome; rerun it after adding a brand. Hosted on Vercel.
 
 ## Legal
 
