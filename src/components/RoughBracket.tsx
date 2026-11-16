@@ -9,7 +9,7 @@ const paths = generator.toPaths(
       [4, 4],
       [45, 3],
     ],
-    { seed: 11, roughness: 1.3, bowing: 1.2, stroke: "currentColor", strokeWidth: 2.6 }
+    { seed: 11, roughness: 1.3, bowing: 1.2, stroke: "currentColor", strokeWidth: 4.5 }
   )
 );
 

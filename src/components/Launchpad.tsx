@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
 import TiltedCard from "@/components/bits/TiltedCard";
+import { AppIcon } from "@/components/AppIcon";
 import GlassSurface from "@/components/bits/GlassSurface";
 
 type Item = { slug: string; name: string; icon: string; colors: string[] };
@@ -30,6 +31,18 @@ export function Launchpad({ items }: { items: Item[] }) {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const [grid, setGrid] = useState<{ cols: number; rows: number } | null>(null);
+  // 3D tilt only for a real mouse/trackpad. On touch screens Safari renders 3D layers soft and
+  // drops the rounded clip, so phones get the plain icon with a press squish instead.
+  const [tilt, setTilt] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const on = () => setTilt(mq.matches);
+    on();
+    mq.addEventListener("change", on);
+    return () => {
+      mq.removeEventListener("change", on);
+    };
+  }, []);
   const area = useRef<HTMLDivElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -132,27 +145,31 @@ export function Launchpad({ items }: { items: Item[] }) {
               {pg.map((d) => (
                 <li key={d.slug} className="flex justify-center pt-2">
                   <Link href={`/${d.slug}`} className="launch-item group flex flex-col items-center">
-                    <TiltedCard
-                      imageSrc={d.icon}
-                      altText=""
-                      containerWidth="var(--icon)"
-                      containerHeight="var(--icon)"
-                      imageWidth="var(--icon)"
-                      imageHeight="var(--icon)"
-                      radius="22.5%"
-                      scaleOnHover={1.14}
-                      rotateAmplitude={16}
-                      glare={0.45}
-                      shadow={0.7}
-                      parallax={0.35}
-                      perspective={500}
-                      showTooltip={false}
-                      flipOnClick={false}
-                      gyroscope={false}
-                      intro={false}
-                      pressable
-                      className="launch-icon app-icon-tilt"
-                    />
+                    {tilt ? (
+                      <TiltedCard
+                        imageSrc={d.icon}
+                        altText=""
+                        containerWidth="var(--icon)"
+                        containerHeight="var(--icon)"
+                        imageWidth="var(--icon)"
+                        imageHeight="var(--icon)"
+                        radius="22.5%"
+                        scaleOnHover={1.14}
+                        rotateAmplitude={16}
+                        glare={0.45}
+                        shadow={0.7}
+                        parallax={0}
+                        perspective={500}
+                        showTooltip={false}
+                        flipOnClick={false}
+                        gyroscope={false}
+                        intro={false}
+                        pressable
+                        className="launch-icon app-icon-tilt"
+                      />
+                    ) : (
+                      <AppIcon src={d.icon} className="launch-icon transition-transform duration-150 ease-out group-active:scale-[0.88]" />
+                    )}
                     <span className="mt-2 w-full truncate text-center text-[11px] md:text-[13px] text-surface/75 group-hover:text-surface">{d.name}</span>
                     <span className="mt-1 flex gap-[3px]" aria-hidden>
                       {d.colors.map((c, i) => (

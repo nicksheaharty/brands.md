@@ -17,8 +17,8 @@ export function Viewfinder() {
         <span className="font-title text-surface text-base md:text-lg tracking-wide leading-none">DESIGN.MD</span>
       </Link>
 
-      <RoughBracket corner="tr" className="absolute right-4 top-4 md:right-7 md:top-6 h-7 w-7 md:h-10 md:w-10 text-surface/70" />
-      <RoughBracket corner="bl" className="absolute left-4 bottom-4 md:left-7 md:bottom-6 h-7 w-7 md:h-10 md:w-10 text-surface/70" />
+      <RoughBracket corner="tr" className="absolute right-4 top-4 md:right-7 md:top-6 h-8 w-8 md:h-10 md:w-10 text-surface/85" />
+      <RoughBracket corner="bl" className="absolute left-4 bottom-4 md:left-7 md:bottom-6 h-8 w-8 md:h-10 md:w-10 text-surface/85" />
 
       <div className="pointer-events-auto absolute right-4 bottom-4 md:right-7 md:bottom-6 flex items-center gap-4 text-xs md:text-sm font-body lowercase text-surface/55">
         <a href={REPO} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">github</a>
