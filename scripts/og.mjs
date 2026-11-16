@@ -7,6 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { chromium } from "playwright-core";
+import rough from "roughjs";
 import { execSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -58,7 +59,13 @@ const frame = `
 const ascii = Array.from({ length: 42 }, (_, r) =>
   Array.from({ length: 140 }, (_, c) => " .:+x=#8"[(r * 7 + c * 3 + ((r * c) % 11)) % 8]).join("")
 ).join("\n");
-const chrome = `<div class="ascii">${ascii}</div><span class="b tl"></span><span class="b tr"></span><span class="b bl"></span><span class="b br"></span>`;
+const rg = rough.generator();
+const bracketPaths = rg
+  .toPaths(rg.linearPath([[3, 45], [4, 4], [45, 3]], { seed: 11, roughness: 1.3, bowing: 1.2, stroke: "#FFEFEA", strokeWidth: 4.5 }))
+  .map((p) => `<path d="${p.d}" stroke="rgba(255,239,234,.85)" stroke-width="${p.strokeWidth}" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`)
+  .join("");
+const bracket = (pos, flip) => `<svg viewBox="0 0 48 48" style="position:absolute;z-index:5;width:52px;height:52px;overflow:visible;${pos};transform:${flip};filter:drop-shadow(0 0 3px #090200) drop-shadow(0 0 8px #090200)">${bracketPaths}</svg>`;
+const chrome = `<div class="ascii">${ascii}</div>${bracket("left:28px;top:28px", "none")}${bracket("right:28px;top:28px", "scale(-1,1)")}${bracket("left:28px;bottom:28px", "scale(1,-1)")}${bracket("right:28px;bottom:28px", "scale(-1,-1)")}`;
 
 const siteHtml = () => {
   const wall = designs.concat(designs, designs).slice(0, 30);
@@ -67,7 +74,7 @@ const siteHtml = () => {
     <div style="height:46px;width:184px">${dots.replace("<svg", '<svg style="height:46px;width:auto"')}</div>
     <div class="title" style="font-size:66px;line-height:1;margin-top:30px;white-space:nowrap">OPEN-SOURCED<br/>BRANDS</div>
     <div style="font-size:34px;font-style:italic;color:#FF9670;margin-top:22px">great artists steal to learn.</div>
-    <div style="font:20px ui-monospace,Menlo,monospace;color:rgba(255,239,234,.5);margin-top:40px">${designs.length} brands · design.nickharty.com</div>
+    <div style="font:20px ui-monospace,Menlo,monospace;color:rgba(255,239,234,.5);margin-top:40px">100+ brands · design.nickharty.com</div>
   </div>
   <div style="position:absolute;left:730px;top:-170px;width:720px;transform:rotate(-14deg);display:grid;grid-template-columns:repeat(5,112px);gap:26px">
     ${wall.map((d) => `<div class="icon" style="width:112px;height:112px">${d.icon}</div>`).join("")}
