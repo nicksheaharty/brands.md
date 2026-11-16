@@ -117,7 +117,7 @@ export function Launchpad({ items }: { items: Item[] }) {
             onKeyDown={(e) => {
               if (e.key === "Escape") setQuery("");
             }}
-            placeholder={`Search ${items.length} Brands`}
+            placeholder={`Search ${items.length} Brands...`}
             className="min-w-0 flex-1 bg-transparent font-body text-surface placeholder:text-surface/30 outline-none"
             aria-label="Search designs"
           />
