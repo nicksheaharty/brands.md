@@ -1,9 +1,11 @@
 // Pulls each brand's official App Store icon via Apple's public iTunes Lookup API
 // and saves it as designs/<slug>/icon.png (256px PNG). The site prefers icon.png over icon.svg.
-// Only the brand's own main app is listed here (seller = the brand).
+// IDs come from each DESIGN.md's `appStoreId` frontmatter, plus the APPS map below for older files.
+// Only the brand's own main app counts (seller = the brand).
 // Run: node scripts/fetch-app-icons.mjs [slug ...]
 import fs from "node:fs";
 import path from "node:path";
+import matter from "gray-matter";
 
 const APPS = {
   airbnb: 401626263,
@@ -34,6 +36,12 @@ const APPS = {
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const only = process.argv.slice(2);
+for (const slug of fs.readdirSync(path.join(root, "designs"))) {
+  const md = path.join(root, "designs", slug, "DESIGN.md");
+  if (!fs.existsSync(md)) continue;
+  const id = matter(fs.readFileSync(md, "utf8")).data.appStoreId;
+  if (id) APPS[slug] = Number(id);
+}
 const slugs = Object.keys(APPS).filter((s) => (!only.length || only.includes(s)) && fs.existsSync(path.join(root, "designs", s)));
 
 const ids = slugs.map((s) => APPS[s]).join(",");
