@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export function generateMetadata(): Metadata {
   const designs = getDesigns();
   const top = ["netflix", "stripe", "instagram", "disney-plus", "y-combinator"].map((s) => designs.find((d) => d.slug === s)?.name).filter(Boolean);
-  const title = "Open-Sourced Brands: free DESIGN.md design systems";
+  const title = "brands.md: free DESIGN.md design systems";
   const description = `Download DESIGN.md design systems for ${top.join(", ")} and ${designs.length - top.length} more brands: colors, fonts, components, logos and app icons, ready for Claude Code, Cursor and other AI coding agents.`;
   return {
     title: { absolute: title },
@@ -17,11 +17,11 @@ export function generateMetadata(): Metadata {
     // Next replaces (doesn't merge) nested openGraph/twitter objects, so the image must be repeated here.
     openGraph: {
       type: "website",
-      siteName: "Open-Sourced Brands",
+      siteName: "brands.md",
       title,
       description,
       url: SITE,
-      images: [{ url: "/og.png", width: 1200, height: 630, type: "image/png", alt: "Open-Sourced Brands: great artists steal to learn." }],
+      images: [{ url: "/og.png", width: 1200, height: 630, type: "image/png", alt: "brands.md: great artists steal to learn." }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
   };
@@ -50,7 +50,7 @@ export default function Page() {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Open-Sourced Brands",
+      name: "brands.md",
       alternateName: "brands.md",
       url: SITE,
       description: "Free DESIGN.md design-system files for well-known brands, written for AI coding agents and designers.",
@@ -67,7 +67,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <h1 className="sr-only">Open-Sourced Brands: free DESIGN.md design systems</h1>
+      <h1 className="sr-only">brands.md: free DESIGN.md design systems</h1>
       <Launchpad items={items} />
     </>
   );

@@ -8,7 +8,7 @@ import sharp from "sharp";
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const src = path.join(root, "designs");
 const out = path.join(root, "public", "designs");
-const site = "https://designs-one-lemon.vercel.app";
+const site = "https://brands-md.vercel.app";
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -49,7 +49,7 @@ fs.writeFileSync(path.join(out, "index.json"), JSON.stringify(index, null, 2));
 
 // llms.txt: a plain index of every file, for AI tools and crawlers.
 const llms = [
-  "# Open-Sourced Brands",
+  "# brands.md",
   "",
   `> Free DESIGN.md design-system files for ${index.length} well-known brands (colors, typography, components, layout, motion, voice, logo and app icon), written for AI coding agents and designers. Unofficial references; not affiliated with the brands.`,
   "",

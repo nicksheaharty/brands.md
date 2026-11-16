@@ -4,15 +4,15 @@ import { Viewfinder } from "@/components/Viewfinder";
 import { AsciiBackground } from "@/components/AsciiBackground";
 import { SITE } from "@/lib/site";
 
-const title = "Open-Sourced Brands: free DESIGN.md design systems for AI agents";
+const title = "brands.md: free DESIGN.md design systems for AI agents";
 const description =
   "Free DESIGN.md files for well-known brands: colors, fonts, components, layout, motion, voice, logos and app icons, ready for Claude Code, Cursor and other AI coding agents. Great artists steal to learn.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { default: title, template: "%s | Open-Sourced Brands" },
+  title: { default: title, template: "%s | brands.md" },
   description,
-  applicationName: "Open-Sourced Brands",
+  applicationName: "brands.md",
   authors: [{ name: "Nick Harty", url: "https://nickharty.com" }],
   creator: "Nick Harty",
   keywords: ["DESIGN.md", "design system", "brand guidelines", "brand colors", "fonts", "logos", "AI coding agent", "Claude Code", "Cursor", "design tokens"],
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   openGraph: {
     type: "website",
-    siteName: "Open-Sourced Brands",
+    siteName: "brands.md",
     title,
     description,
     url: SITE,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Open-Sourced Brands: great artists steal to learn." }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "brands.md: great artists steal to learn." }],
   },
   twitter: { card: "summary_large_image", title, description, images: ["/og.png"], creator: "@nicksheaharty" },
 };
