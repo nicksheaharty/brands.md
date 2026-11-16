@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export function generateMetadata(): Metadata {
   const designs = getDesigns();
   const top = ["netflix", "stripe", "instagram", "disney-plus", "y-combinator"].map((s) => designs.find((d) => d.slug === s)?.name).filter(Boolean);
-  const title = `Open-Sourced Brands: free DESIGN.md files for ${designs.length} brands`;
+  const title = "Open-Sourced Brands: free DESIGN.md design systems";
   const description = `Download DESIGN.md design systems for ${top.join(", ")} and ${designs.length - top.length} more brands: colors, fonts, components, logos and app icons, ready for Claude Code, Cursor and other AI coding agents.`;
   return {
     title: { absolute: title },
