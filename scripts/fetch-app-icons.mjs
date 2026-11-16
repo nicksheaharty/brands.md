@@ -39,7 +39,12 @@ const only = process.argv.slice(2);
 for (const slug of fs.readdirSync(path.join(root, "designs"))) {
   const md = path.join(root, "designs", slug, "DESIGN.md");
   if (!fs.existsSync(md)) continue;
-  const id = matter(fs.readFileSync(md, "utf8")).data.appStoreId;
+  let id;
+  try {
+    id = matter(fs.readFileSync(md, "utf8")).data.appStoreId;
+  } catch {
+    continue; // folder still being written
+  }
   if (id) APPS[slug] = Number(id);
 }
 const slugs = Object.keys(APPS).filter((s) => (!only.length || only.includes(s)) && fs.existsSync(path.join(root, "designs", s)));

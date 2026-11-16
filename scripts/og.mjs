@@ -26,9 +26,15 @@ const designs = fs
   .filter((s) => fs.existsSync(path.join(dir, s, "icon.svg")) && fs.existsSync(path.join(dir, s, "DESIGN.md")))
   .sort()
   .map((slug) => {
-    const { data } = matter(fs.readFileSync(path.join(dir, slug, "DESIGN.md"), "utf8"));
+    let data;
+    try {
+      data = matter(fs.readFileSync(path.join(dir, slug, "DESIGN.md"), "utf8")).data;
+    } catch {
+      return null;
+    }
     return { slug, name: data.name, tagline: data.tagline, colors: (data.colors ?? []).slice(0, 6).map((c) => c.hex), icon: iconHtml(slug) };
-  });
+  })
+  .filter(Boolean);
 
 const frame = `
   <link rel="stylesheet" href="https://use.typekit.net/dzz3gsh.css" />
