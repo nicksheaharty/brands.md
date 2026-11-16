@@ -148,3 +148,15 @@ h1, h2, h3, h4, h5, h6, .font-title {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .app-icon-tilt .tilted-card__front img { clip-path: inset(0 round 22.5%); }
+
+/* Search bar: same tint, inset and radius as a hovered .btn-ghost; focus presses it in like :active. */
+.search-bar {
+  border-radius: var(--radius-control);
+  background: rgba(255, 150, 112, 0.1);
+  box-shadow: var(--inset-rest-outline);
+  transition: box-shadow 200ms ease, background-color 200ms ease;
+}
+.search-bar:focus-within {
+  background: rgba(255, 150, 112, 0.14);
+  box-shadow: var(--inset-deep-outline);
+}

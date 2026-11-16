@@ -26,6 +26,14 @@
    "title": "Apple TV (streaming service)",
    "views": 96591
   },
+  "capcut": {
+   "title": "CapCut",
+   "views": 93139
+  },
+  "capital-one": {
+   "title": "Capital One",
+   "views": 78784
+  },
   "criterion-channel": {
    "title": "The Criterion Collection",
    "views": 62969
@@ -46,6 +54,18 @@
    "title": "Facebook",
    "views": 1787661
   },
+  "gemini": {
+   "title": "Google Gemini",
+   "views": 245012
+  },
+  "google": {
+   "title": "Google",
+   "views": 2321439
+  },
+  "gowish": {
+   "title": null,
+   "views": 0
+  },
   "hbo-max": {
    "title": "HBO Max",
    "views": 133658
@@ -57,6 +77,10 @@
   "instagram": {
    "title": "Instagram",
    "views": 2148863
+  },
+  "kalshi": {
+   "title": "Kalshi",
+   "views": 238809
   },
   "legendary": {
    "title": "Legendary Entertainment",
@@ -73,6 +97,10 @@
   "lionsgate": {
    "title": null,
    "views": 0
+  },
+  "microsoft": {
+   "title": "Microsoft",
+   "views": 536084
   },
   "mubi": {
    "title": null,
@@ -106,6 +134,10 @@
    "title": "Pear VC",
    "views": 1859
   },
+  "pinterest": {
+   "title": "Pinterest",
+   "views": 275296
+  },
   "pixar": {
    "title": "Pixar",
    "views": 258784
@@ -117,6 +149,10 @@
   "prime-video": {
    "title": "Amazon Prime Video",
    "views": 178012
+  },
+  "reelshort": {
+   "title": "ReelShort",
+   "views": 17805
   },
   "shopify": {
    "title": "Shopify",
@@ -142,9 +178,29 @@
    "title": "Techstars",
    "views": 3052
   },
+  "telegram": {
+   "title": "Telegram (software)",
+   "views": 363341
+  },
+  "temu": {
+   "title": "Temu",
+   "views": 115323
+  },
+  "threads": {
+   "title": "Threads (social network)",
+   "views": 65036
+  },
+  "tiktok": {
+   "title": "TikTok",
+   "views": 652011
+  },
   "tubi": {
    "title": "Tubi",
    "views": 93490
+  },
+  "uber": {
+   "title": "Uber",
+   "views": 0
   },
   "universal": {
    "title": "Universal Pictures",
@@ -154,17 +210,41 @@
    "title": "University of Pennsylvania",
    "views": 165228
   },
+  "vinted": {
+   "title": "Vinted",
+   "views": 77752
+  },
+  "vizio": {
+   "title": "Vizio",
+   "views": 17627
+  },
+  "walmart": {
+   "title": "Walmart",
+   "views": 286207
+  },
   "warner-bros": {
    "title": "Warner Bros.",
    "views": 144473
+  },
+  "whatnot": {
+   "title": "Whatnot",
+   "views": 34342
   },
   "x": {
    "title": "X (social network)",
    "views": 929279
   },
+  "xai": {
+   "title": "Grok (chatbot)",
+   "views": 153482
+  },
   "y-combinator": {
    "title": "Y Combinator",
    "views": 101510
+  },
+  "youtube": {
+   "title": "YouTube",
+   "views": 3648706
   }
  }
 }
