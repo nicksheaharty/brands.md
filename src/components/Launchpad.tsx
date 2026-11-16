@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { MagnifyingGlass, X } from "@phosphor-icons/react";
+import { GitBranch, MagnifyingGlass, X } from "@phosphor-icons/react";
 import TiltedCard from "@/components/bits/TiltedCard";
 import { AppIcon } from "@/components/AppIcon";
 import { EmptySketch } from "@/components/EmptySketch";
@@ -145,7 +145,8 @@ export function Launchpad({ items }: { items: Item[] }) {
                     rel="noopener noreferrer"
                     className="btn btn-ghost btn-sm mt-3"
                   >
-                    request it on github
+                    <GitBranch weight="bold" className="h-4 w-4" />
+                    Request it on GitHub
                   </a>
                 </div>
         )}
