@@ -2,9 +2,9 @@
   <img src="public/assets/logo-color.svg" height="40" alt="Harty dots">
 </p>
 
-<h1 align="center">design.md library</h1>
+<h1 align="center">brands.md</h1>
 
-<p align="center"><em>great artists steal to learn.</em></p>
+<p align="center"><em>great artists steal to learn.</em><br/>Open-sourced DESIGN.md files for 100+ brands.</p>
 
 <p align="center">
   <a href="https://design.nickharty.com">design.nickharty.com</a>

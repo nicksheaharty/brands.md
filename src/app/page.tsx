@@ -51,7 +51,7 @@ export default function Page() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "Open-Sourced Brands",
-      alternateName: "DESIGN.MD",
+      alternateName: "brands.md",
       url: SITE,
       description: "Free DESIGN.md design-system files for well-known brands, written for AI coding agents and designers.",
       author: { "@type": "Person", name: "Nick Harty", url: "https://nickharty.com" },

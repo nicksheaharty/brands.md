@@ -10,11 +10,11 @@ export function Viewfinder() {
       <Link
         href="/"
         className="pointer-events-auto absolute left-4 top-4 md:left-7 md:top-6 flex items-center gap-3 group"
-        aria-label="DESIGN.MD home"
+        aria-label="brands.md home"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/assets/logo-color.svg" alt="" className="h-6 md:h-7 w-auto transition-opacity group-hover:opacity-80" />
-        <span className="font-title text-surface text-base md:text-lg tracking-wide leading-none">DESIGN.MD</span>
+        <span className="font-title text-surface text-base md:text-lg tracking-wide leading-none">brands.md</span>
       </Link>
 
       <RoughBracket corner="tr" className="absolute right-4 top-4 md:right-7 md:top-6 h-8 w-8 md:h-10 md:w-10 text-surface/85" />
