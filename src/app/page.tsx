@@ -1,7 +1,12 @@
 import { getDesigns } from "@/lib/designs";
-import { Home } from "@/components/Home";
+import { Launchpad } from "@/components/Launchpad";
 
 export default function Page() {
-  const items = getDesigns().map((d) => ({ slug: d.slug, name: d.name === "University of Pennsylvania" ? "Penn" : d.name, icon: d.icon }));
-  return <Home items={items} />;
+  const items = getDesigns().map((d) => ({
+    slug: d.slug,
+    name: d.name === "University of Pennsylvania" ? "Penn" : d.name,
+    icon: d.icon,
+    colors: d.colors.slice(0, 6).map((c) => c.hex),
+  }));
+  return <Launchpad items={items} />;
 }

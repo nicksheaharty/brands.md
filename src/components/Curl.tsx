@@ -15,7 +15,7 @@ export function Curl({ slug }: { slug: string }) {
           setTimeout(() => setDone(false), 1400);
         })
       }
-      className="group flex w-full items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-4 py-3.5 text-left hover:border-white/25 transition-colors"
+      className="group flex h-[50px] w-full items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-4 backdrop-blur-sm text-left hover:border-white/25 transition-colors"
       aria-label="Copy command"
     >
       <span className="text-primary font-mono text-sm select-none">$</span>

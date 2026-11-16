@@ -121,3 +121,8 @@ h1, h2, h3, h4, h5, h6, .font-title {
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
 }
+
+@keyframes grow {
+  from { max-width: 50px; opacity: 0.6; }
+  to { max-width: 100%; opacity: 1; }
+}

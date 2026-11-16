@@ -27,7 +27,7 @@ export default async function DesignPage({ params }: { params: Promise<{ slug: s
   const { html } = renderMarkdown(d.body);
 
   return (
-    <div className="w-full px-6 md:px-12 pt-6 pb-24">
+    <div className="h-full w-full overflow-y-auto overscroll-contain scrollbar-hide px-6 md:px-12 pt-2 pb-16">
       <div className="max-w-4xl mx-auto">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-surface/40 hover:text-primary transition-colors">
           <ArrowLeft weight="bold" className="w-4 h-4" /> all designs
