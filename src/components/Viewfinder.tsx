@@ -20,7 +20,9 @@ export function Viewfinder() {
       <RoughBracket corner="tr" className="absolute right-4 top-4 md:right-7 md:top-6 h-8 w-8 md:h-10 md:w-10 text-surface/85" />
       <RoughBracket corner="bl" className="absolute left-4 bottom-4 md:left-7 md:bottom-6 h-8 w-8 md:h-10 md:w-10 text-surface/85" />
 
-      <div className="pointer-events-auto absolute right-4 bottom-4 md:right-7 md:bottom-6 flex items-center gap-4 text-xs md:text-sm font-body lowercase text-surface/55">
+      <div className="pointer-events-auto absolute right-4 bottom-4 md:right-7 md:bottom-6 flex items-center gap-3 md:gap-4 text-xs md:text-sm font-body lowercase text-surface/55">
+        <Link href="/terms" className="hover:text-primary transition-colors">terms</Link>
+        <Link href="/privacy" className="hover:text-primary transition-colors">privacy</Link>
         <a href={REPO} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">github</a>
         <a href="https://nickharty.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">nickharty.com</a>
       </div>

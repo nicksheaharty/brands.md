@@ -319,6 +319,6 @@ Next.js 15 (App Router, every page static) and Tailwind 3, styled after [nickhar
 
 These files are unofficial references written from public products and published brand guidelines. They are not affiliated with or endorsed by any of the brands. Logos and brand names are trademarks of their owners and are included so the references are complete; follow each brand's own guidelines before using its logo. Values marked as approximate in a file are best estimates.
 
-Site code is MIT. The DESIGN.md text is CC BY 4.0.
+Site code is MIT. The DESIGN.md text is CC BY 4.0. Brand owners can request changes or removal at legal@nickharty.com. See the [terms](https://brands.nickharty.com/terms) and [privacy policy](https://brands.nickharty.com/privacy).
 
 Made by [Nick Harty](https://nickharty.com).
